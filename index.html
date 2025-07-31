@@ -1,122 +1,88 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Club Rotary Huaraz Colonial</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-    body { font-family: Arial, sans-serif; background: #f4f4f4; color: #333; }
-    header { background: #0c3c78; color: white; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 999; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    section { padding: 60px 20px; text-align: center; }
-    h2 { color: #0c3c78; margin-bottom: 20px; }
-    .btn {
-      padding: 10px 20px;
-      background: #25D366;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    header {
+      background-color: #0b3d91;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #0b3d91;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
       color: white;
       text-decoration: none;
-      border-radius: 6px;
-      margin-top: 15px;
-      display: inline-block;
+      font-weight: bold;
     }
-    .btn:hover { background: #1ebe57; }
-    footer { background: #0c3c78; color: white; padding: 20px; text-align: center; }
+    section {
+      padding: 20px;
+    }
+    .saludo-presidente {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+      justify-content: center;
+    }
+    .saludo-presidente img {
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .saludo-presidente .mensaje {
+      max-width: 500px;
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Club Rotary Huaraz Colonial</h1>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#saludo-presidente">Saludo</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#galeria-fotos">Galería</a>
-      <a href="#unete">Únete</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
+<header>
+  <h1>Club Rotary Huaraz Colonial</h1>
+</header>
 
-  <section id="inicio">
-    <h2>Bienvenidos</h2>
-    <p>Juntos construimos un futuro con esperanza, acción y servicio. 🌟</p>
-  </section>
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#saludo">Saludo</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#proyectos">Proyectos</a>
+  <a href="#galeria">Galería</a>
+  <a href="#contacto">Contácto</a>
+</nav>
 
-  <section id="saludo-presidente" style="background-color: #ffffff; padding: 60px 20px; text-align: center;">
-    <h2 style="color: #0c3c78; margin-bottom: 40px;">Saludo del Presidente</h2>
-    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 30px; max-width: 1000px; margin: auto;">
-      <img src="presi.jpg" alt="Presidente José Rafael Zeña" style="width: 250px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-      <div style="max-width: 600px; text-align: left;">
-        <p style="font-size: 1.1em; line-height: 1.6em;">
-          <strong>¡Querida comunidad de Huaraz, Áncash y del Perú!</strong><br><br>
-          Desde nuestro club, trabajamos con corazón, compromiso y visión de futuro. No somos solo un grupo de voluntarios, somos una familia en acción, decidida a transformar nuestra realidad con proyectos tangibles y esperanza viva.  
-          <br><br>
-          Como presidente del Club Rotary Huaraz Colonial, los invito a caminar juntos en este sueño compartido de servicio, liderazgo y amor por nuestra tierra.
-        </p>
-        <p style="margin-top: 20px; font-weight: bold; color: #0c3c78;">José Rafael Zeña Peche<br>Presidente 2025-2026</p>
-      </div>
+<section id="saludo">
+  <h2 style="text-align: center;">Saludo del Presidente</h2>
+  <div class="saludo-presidente">
+    <img src="Presi.jpg" alt="Presidente José Rafael Zeña">
+    <div class="mensaje">
+      <p><strong>¡Querida comunidad de Huaraz, Áncash y del Perú!</strong></p>
+      <p>
+        Desde nuestro club, trabajamos con corazón, compromiso y visión de futuro.
+        No somos solo un grupo de voluntarios, somos una familia en acción,
+        decidida a transformar nuestra realidad con proyectos tangibles y esperanza viva.
+      </p>
+      <p>
+        Como presidente del Club Rotary Huaraz Colonial, los invito a caminar
+        juntos en este sueño compartido de servicio, liderazgo y amor por nuestra tierra.
+      </p>
+      <p><strong>José Rafael Zeña Peche<br>Presidente 2025-2026</strong></p>
     </div>
-  </section>
-
-  <section id="nosotros">
-    <h2>¿Quiénes somos?</h2>
-    <p>El Club Rotary Huaraz Colonial fue fundado en abril de 2025 y está comprometido con el desarrollo social, la ética en la vida pública y el servicio comunitario. 💙💛</p>
-  </section>
-
-  <section id="proyectos">
-    <h2>Proyectos en marcha</h2>
-    <p>✅ Energía solar para postas médicas<br>
-       ✅ Acceso a agua caliente con termas solares<br>
-       ✅ Apoyo a jóvenes emprendedores<br>
-       ✅ Capacitación técnica y más</p>
-  </section>
-
-  <section id="galeria-fotos">
-    <h2>Galería de actividades</h2>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-      <img src="Foto%201.jpg" alt="Foto 1" width="200">
-      <img src="Foto%202.jpg" alt="Foto 2" width="200">
-      <img src="Foto%203.jpg" alt="Foto 3" width="200">
-      <img src="Foto%204.jpg" alt="Foto 4" width="200">
-      <img src="Foto%205.jpg" alt="Foto 5" width="200">
-      <img src="Foto%206.jpg" alt="Foto 6" width="200">
-      <img src="Foto%207.jpg" alt="Foto 7" width="200">
-      <img src="Foto%208.jpg" alt="Foto 8" width="200">
-      <img src="Foto%209.jpg" alt="Foto 9" width="200">
-      <img src="Foto%2010.jpg" alt="Foto 10" width="200">
-      <img src="Foto%2011.jpg" alt="Foto 11" width="200">
-      <img src="Foto%2012.jpg" alt="Foto 12" width="200">
-      <img src="Foto%2013.jpg" alt="Foto 13" width="200">
-      <img src="Foto%2014.jpg" alt="Foto 14" width="200">
-      <img src="Foto%2015.jpg" alt="Foto 15" width="200">
-      <img src="Foto%2016.jpg" alt="Foto 16" width="200">
-      <img src="Foto%2017.jpg" alt="Foto 17" width="200">
-      <img src="Foto%2018.jpg" alt="Foto 18" width="200">
-    </div>
-  </section>
-
-  <section id="unete">
-    <h2>Únete al Club</h2>
-    <p>¿Eres solidario, soñador y quieres cambiar el mundo desde tu ciudad? ¡Rotary te espera! 🤝</p>
-    <a class="btn" href="https://wa.me/51942899919?text=Hola%20quiero%20unirme%20al%20Club%20Rotary%20Huaraz%20Colonial" target="_blank">
-      Escríbenos por WhatsApp
-    </a>
-  </section>
-
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>📧 crotary.club.huaraz.colonial@gmail.com<br>
-       📍 Huaraz, Áncash, Perú</p>
-    <a class="btn" href="https://wa.me/51942899919?text=Hola%20quiero%20saber%20más%20sobre%20el%20Club%20Rotary%20Huaraz%20Colonial" target="_blank">
-      Escríbenos por WhatsApp
-    </a>
-  </section>
-
-  <footer>
-    <p>© 2025 Club Rotary Huaraz Colonial – Todos los derechos reservados</p>
-  </footer>
+  </div>
+</section>
 
 </body>
 </html>
