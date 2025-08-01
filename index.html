@@ -16,18 +16,28 @@
       background-color: #003366;
       color: white;
       padding: 15px 20px;
+    }
+
+    .logo-titulo {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 15px;
       flex-wrap: wrap;
     }
 
-    header img {
-      height: 50px;
+    .logo-titulo img {
+      height: 60px;
+      width: auto;
+    }
+
+    .logo-titulo h1 {
+      margin: 0;
+      font-size: 26px;
     }
 
     nav {
       margin-top: 10px;
+      text-align: center;
     }
 
     nav a {
@@ -80,6 +90,12 @@
       color: #003366;
     }
 
+    .galeria-imgs img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+    }
+
     footer {
       background-color: #003366;
       color: white;
@@ -116,11 +132,6 @@
         max-width: 100%;
       }
 
-      nav {
-        text-align: center;
-        width: 100%;
-      }
-
       nav a {
         display: inline-block;
         margin: 5px;
@@ -131,8 +142,10 @@
 <body>
 
   <header>
-    <img src="LogoCRHC.jpg" alt="Logo Club Rotary Huaraz Colonial">
-    <h1>Club Rotary Huaraz Colonial</h1>
+    <div class="logo-titulo">
+      <img src="logo.png" alt="Logo Club Rotary Huaraz Colonial">
+      <h1>Club Rotary Huaraz Colonial</h1>
+    </div>
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#saludo">Saludo</a>
@@ -172,8 +185,14 @@
   </section>
 
   <section id="galeria">
-    <h2>Galería</h2>
-    <p>Muy pronto compartiremos nuestras mejores fotos. ¡Espéralo!</p>
+    <h2 style="color:#003366;">Galería de Momentos</h2>
+    <div class="galeria-imgs" style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+      <img src="Foto 1.jpg" alt="Foto 1">
+      <img src="Foto 2.jpg" alt="Foto 2">
+      <img src="Foto 3.jpg" alt="Foto 3">
+      <img src="Foto 4.jpg" alt="Foto 4">
+      <img src="Foto 5.jpg" alt="Foto 5">
+    </div>
   </section>
 
   <section id="unete">
@@ -198,13 +217,3 @@
 
 </body>
 </html>
-<section id="galeria">
-  <h2 style="color:#003366;">Galería de Momentos</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
-    <img src="Foto 1.jpg" alt="Foto 1" style="width: 200px; height: auto; border-radius: 8px;">
-    <img src="Foto 2.jpg" alt="Foto 2" style="width: 200px; height: auto; border-radius: 8px;">
-    <img src="Foto 3.jpg" alt="Foto 3" style="width: 200px; height: auto; border-radius: 8px;">
-    <img src="Foto 4.jpg" alt="Foto 4" style="width: 200px; height: auto; border-radius: 8px;">
-    <img src="Foto 5.jpg" alt="Foto 5" style="width: 200px; height: auto; border-radius: 8px;">
-  </div>
-</section>
