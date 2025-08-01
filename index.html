@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Club Rotary Huaraz Colonial</title>
   <style>
     body {
@@ -14,10 +14,20 @@
 
     header {
       background-color: #003366;
-      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 10px 20px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container img {
+      height: 60px;
+      margin-right: 20px;
     }
 
     nav ul {
@@ -85,7 +95,6 @@
       padding: 20px;
     }
 
-    /* WhatsApp flotante */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -101,18 +110,20 @@
 </head>
 <body>
 
-  <!-- Menú con redes sociales -->
   <header>
-    <nav>
-      <ul>
-        <li><a href="#saludo">Saludo</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#unete">Únete</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo Club Rotary">
+      <nav>
+        <ul>
+          <li><a href="#saludo">Saludo</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#unete">Únete</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
     <div class="redes">
       <a href="https://www.tiktok.com/@clubrotaryhuarazcolonial" target="_blank">
         <img src="tiktok-icon.png" alt="TikTok" />
@@ -123,7 +134,6 @@
     </div>
   </header>
 
-  <!-- Buzón único -->
   <section id="contacto">
     <h2>Buzón de Proyectos</h2>
     <form>
@@ -134,12 +144,10 @@
     </form>
   </section>
 
-  <!-- Botón flotante de WhatsApp -->
   <a class="whatsapp-float" href="https://wa.me/51987654321" target="_blank">
     <img src="whatsapp-icon.png" alt="WhatsApp" />
   </a>
 
-  <!-- Pie de página -->
   <footer>
     © 2025 Club Rotary Huaraz Colonial – Todos los derechos reservados
   </footer>
