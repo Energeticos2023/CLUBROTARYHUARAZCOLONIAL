@@ -66,16 +66,17 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
-    .redes-sociales {
+    .iconos-redes {
       display: flex;
       justify-content: center;
       gap: 20px;
       margin: 30px 0;
     }
 
-    .redes-sociales img {
-      height: 30px;
-      margin-left: 10px;
+    .icono-red {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
     }
 
     .galeria img {
@@ -84,19 +85,19 @@
     }
 
     .whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
 
     .whatsapp-float img {
-  width: 60px;
-  height: 60px;
-}
-    
+      width: 60px;
+      height: 60px;
+    }
+
     footer {
       background-color: #003366;
       color: white;
@@ -136,7 +137,6 @@
 </head>
 <body>
 
-  <!-- Encabezado -->
   <header>
     <div class="logo-contenedor">
       <img src="Logo.png" alt="Logo Club Rotary">
@@ -152,17 +152,16 @@
     </nav>
   </header>
 
-  <!-- Redes sociales visibles al inicio -->
+  <!-- Redes sociales arriba -->
   <div class="iconos-redes">
-  <a href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank">
-    <img src="facebook.png" alt="Facebook" />
-  </a>
-  <a href="https://www.tiktok.com/@club.rotary.huara" target="_blank">
-    <img src="tiktok.png" alt="TikTok" />
-  </a>
-</div>
+    <a href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank">
+      <img src="facebook.png" alt="Facebook" class="icono-red" />
+    </a>
+    <a href="https://www.tiktok.com/@club.rotary.huara" target="_blank">
+      <img src="tiktok.png" alt="TikTok" class="icono-red" />
+    </a>
+  </div>
 
-  <!-- Saludo -->
   <section id="saludo">
     <div class="presidente">
       <img src="Presi.jpg" alt="Presidente">
@@ -176,13 +175,11 @@
     </div>
   </section>
 
-  <!-- Nosotros -->
   <section id="nosotros">
     <h2>¿Quiénes somos?</h2>
     <p>El Club Rotary Huaraz Colonial nació en abril de 2025 con el compromiso de servir a nuestra comunidad con ética, solidaridad y acción concreta. Somos parte de una red mundial que construye paz, desarrollo y esperanza.</p>
   </section>
 
-  <!-- Proyectos -->
   <section id="proyectos">
     <h2>Proyectos transformadores</h2>
     <ul>
@@ -192,7 +189,6 @@
     </ul>
   </section>
 
-  <!-- Galería -->
   <section id="galeria">
     <h2>Galería de momentos</h2>
     <div class="galeria" style="display: flex; flex-wrap: wrap; gap: 50px; justify-content: center;">
@@ -204,7 +200,6 @@
     </div>
   </section>
 
-  <!-- Únete -->
   <section id="unete">
     <h2>Únete al Club</h2>
     <p>¿Tienes vocación de servicio? ¿Te inspira cambiar el mundo desde tu comunidad?</p>
@@ -213,19 +208,16 @@
     </a>
   </section>
 
-  <!-- Empresas e instituciones -->
   <section>
     <h2>Empresas aliadas</h2>
     <p>Invitamos a instituciones y empresas comprometidas con el bienestar social a sumarse a nuestros propósitos. ¡Construyamos juntos impacto real!</p>
   </section>
 
-  <!-- Conexión con el mundo -->
   <section>
     <h2>Conexión global</h2>
     <p>Somos parte de una red de 1.4 millones de rotarios en 200 países. Conectamos personas, ideas y soluciones para un mundo mejor.</p>
   </section>
 
-  <!-- Buzones -->
   <section>
     <h2>Buzón de consultas</h2>
     <form>
@@ -236,22 +228,21 @@
     </form>
   </section>
 
-   <!-- Redes sociales también al final -->
+  <!-- Redes sociales al final -->
   <div class="iconos-redes">
-  <a href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank">
-    <img src="facebook.png" alt="Facebook" />
-  </a>
-  <a href="https://www.tiktok.com/@club.rotary.huara" target="_blank">
-    <img src="tiktok.png" alt="TikTok" />
-  </a>
-</div>
+    <a href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank">
+      <img src="facebook.png" alt="Facebook" class="icono-red" />
+    </a>
+    <a href="https://www.tiktok.com/@club.rotary.huara" target="_blank">
+      <img src="tiktok.png" alt="TikTok" class="icono-red" />
+    </a>
+  </div>
 
-  <!-- WhatsApp fijo -->
- <a class="whatsapp-float" href="https://wa.me/51942899919" target="_blank">
-  <img src="whatsapp.png" alt="WhatsApp">
-</a>
+  <!-- WhatsApp flotante -->
+  <a class="whatsapp-float" href="https://wa.me/51942899919" target="_blank">
+    <img src="whatsapp.png" alt="WhatsApp">
+  </a>
 
-  <!-- Pie de página -->
   <footer>
     <p>© 2025 Club Rotary Huaraz Colonial – Todos los derechos reservados</p>
     <p>📍 Huaraz, Áncash, Perú | 📧 club.rotary.huaraz.colonial@gmail.com</p>
@@ -259,10 +250,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
