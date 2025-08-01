@@ -1,169 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <title>Club Rotary Huaraz Colonial</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club Rotary Huaraz Colonial</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f4f6f9;
+      background-color: #f5f7fa;
     }
 
     header {
       background-color: #003366;
-      padding: 10px 20px;
+      color: white;
+      padding: 20px 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
+      position: relative;
     }
 
-    .logo-contenedor {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo-contenedor img {
-      height: 70px;
+    header img {
+      height: 90px;
+      margin-left: 20px;
     }
 
     nav {
-      margin-top: 10px;
+      margin-right: 30px;
     }
 
     nav a {
       color: white;
-      margin: 0 10px;
       text-decoration: none;
+      margin-left: 20px;
       font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .social-icons {
+      position: absolute;
+      right: 20px;
+      top: 20px;
     }
 
-    .redes-sociales {
-      display: flex;
-      gap: 10px;
-      margin-left: auto;
-    }
-
-    .redes-sociales img {
-      height: 28px;
-      width: 28px;
+    .social-icons a {
+      color: white;
+      font-size: 20px;
+      margin-left: 10px;
     }
 
     section {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .presidente {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    .presidente img {
-      max-width: 250px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-    .mensaje-presidente {
-      max-width: 700px;
-    }
-
-    .mensaje-presidente h2 {
-      color: #003366;
-      font-size: 26px;
-    }
-
-    .mensaje-presidente p {
-      line-height: 1.6;
-      font-size: 18px;
-      color: #333;
+      padding: 40px;
     }
 
     h2 {
       color: #003366;
     }
 
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 20px;
+    .presidente {
+      display: flex;
+      align-items: center;
+      gap: 30px;
     }
 
-    .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 20px;
-      right: 20px;
-      background-color: transparent;
-      border-radius: 50%;
-      text-align: center;
-      z-index: 100;
+    .presidente img {
+      width: 180px;
+      border-radius: 15px;
     }
 
-    .whatsapp-float img {
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .galeria img {
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    .formulario input,
+    .formulario textarea {
       width: 100%;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      margin: 10px 0;
       padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      margin: 5px 0;
     }
 
-    form button {
+    .formulario button {
       background-color: #003366;
       color: white;
       padding: 10px 20px;
       border: none;
-      border-radius: 5px;
-      font-size: 16px;
       cursor: pointer;
     }
 
-    @media screen and (max-width: 768px) {
-      .presidente {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .mensaje-presidente {
-        max-width: 100%;
-      }
-
-      nav {
-        text-align: center;
-        width: 100%;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px;
-      }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <div class="logo-contenedor">
-      <img src="Logo.png" alt="Logo Club Rotary Huaraz Colonial">
-    </div>
+    <img src="Logo.png" alt="Logo Rotary">
     <nav>
       <a href="#saludo">Saludo</a>
       <a href="#nosotros">Nosotros</a>
@@ -172,69 +116,66 @@
       <a href="#unete">Únete</a>
       <a href="#contacto">Contacto</a>
     </nav>
-    <div class="redes-sociales">
-      <a href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank"><img src="facebook.png" alt="Facebook"></a>
-      <a href="https://www.tiktok.com/@club.rotary.huara?_t=ZS-8yVDly5OpvN&_r=1" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.tiktok.com/@club.rotary.huara?_t=ZS-8yVDly5OpvN&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://wa.me/51949847015" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
   </header>
 
   <section id="saludo">
     <div class="presidente">
-      <img src="Presidente.jpg" alt="Presidente José Rafael Zeña">
-      <div class="mensaje-presidente">
+      <img src="Presi.jpg" alt="Presidente">
+      <div>
         <h2>Saludo del Presidente</h2>
         <p><strong>¡Querida comunidad de Huaraz, Áncash y del Perú!</strong></p>
-        <p>Desde nuestro club, trabajamos con corazón, compromiso y visión de futuro. No somos solo un grupo de voluntarios, somos una familia en acción, decidida a transformar nuestra realidad con proyectos tangibles y esperanza viva.</p>
-        <p>Como presidente del Club Rotary Huaraz Colonial, los invito a caminar juntos en este sueño compartido de servicio, liderazgo y amor por nuestra tierra.</p>
-        <p><strong>José Rafael Zeña Peche<br>Presidente 2025-2026</strong></p>
+        <p>Desde el corazón de los Andes, trabajamos con pasión rotaria, solidaridad y visión de futuro. No somos solo un club, somos una hermandad que actúa para cambiar vidas.</p>
+        <p>Como presidente del Club Rotary Huaraz Colonial, los invito a soñar con los ojos abiertos y caminar con propósito: servir a los demás, promover la paz, defender la integridad y sembrar esperanza en el mundo.</p>
+        <p><strong>José Rafael Zeña Peche</strong><br>Presidente 2025-2026</p>
       </div>
     </div>
   </section>
 
   <section id="nosotros">
     <h2>¿Quiénes somos?</h2>
-    <p>El Club Rotary Huaraz Colonial fue fundado en abril de 2025 y está comprometido con el desarrollo social, la ética en la vida pública y el servicio comunitario, con un enfoque humano, solidario y transformador.</p>
+    <p>Fundado en abril de 2025, nuestro club se inspira en los principios de Rotary Internacional: servir por encima de sí mismo, promover la paz, fortalecer la salud, fomentar la educación y apoyar el desarrollo económico en nuestras comunidades.</p>
   </section>
 
   <section id="proyectos">
-    <h2>Proyectos en marcha</h2>
+    <h2>Proyectos que transforman vidas</h2>
     <ul>
-      <li>Instalación de termas solares en comunidades rurales</li>
-      <li>Sistemas fotovoltaicos en postas y escuelas</li>
-      <li>Campañas de salud, educación y agua limpia</li>
+      <li>Instalación de termas solares para familias rurales sin acceso a agua caliente.</li>
+      <li>Implementación de sistemas fotovoltaicos en postas de salud y escuelas rurales.</li>
+      <li>Campañas integrales de salud, educación y acceso a agua segura en zonas vulnerables.</li>
     </ul>
   </section>
 
   <section id="galeria">
     <h2>Galería de Momentos</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
-      <img src="foto1.jpg" alt="Foto 1" style="width: 200px; border-radius: 8px;">
-      <img src="foto2.jpg" alt="Foto 2" style="width: 200px; border-radius: 8px;">
-      <img src="foto3.jpg" alt="Foto 3" style="width: 200px; border-radius: 8px;">
-      <img src="foto4.jpg" alt="Foto 4" style="width: 200px; border-radius: 8px;">
-      <img src="foto5.jpg" alt="Foto 5" style="width: 200px; border-radius: 8px;">
+    <div class="galeria">
+      <img src="foto1.png" alt="Momento 1">
+      <img src="foto2.png" alt="Momento 2">
+      <img src="foto3.png" alt="Momento 3">
+      <img src="foto4.png" alt="Momento 4">
+      <img src="foto5.png" alt="Momento 5">
     </div>
   </section>
 
   <section id="unete">
-    <h2>Únete al Club</h2>
-    <p>¿Tienes vocación de servicio y quieres transformar tu comunidad? ¡Este es tu lugar!</p>
-    <button onclick="window.location.href='https://wa.me/51942899919?text=Hola,%20quiero%20ser%20parte%20del%20Club%20Rotary%20Huaraz%20Colonial'">
-      Quiero ser parte del Club
-    </button>
-  </section>
+    <h2>Únete a Nuestro Club</h2>
+    <p>¿Tienes vocación de servicio y quieres ser parte de un movimiento global con impacto local? ¡Este es tu lugar!</p>
+    <button onclick="window.location.href='mailto:club.rotary.huaraz.colonial@gmail.com'">Quiero ser parte del Club</button>
 
-  <section>
-    <h2>Empresas e Instituciones</h2>
-    <p>Si representas a una institución o empresa interesada en apoyar nuestras causas, contáctanos. Juntos podemos lograr más.</p>
+    <h3>Empresas e Instituciones</h3>
+    <p>Si representas a una institución o empresa con interés en sumarse a nuestras causas, contáctanos. Juntos lograremos más.</p>
 
-    <h2>Conexión con el Mundo</h2>
-    <p>Rotary es una red mundial de líderes y agentes de cambio. Nuestro club está enlazado a miles de clubes en todo el mundo que comparten los mismos valores de servicio, paz y desarrollo.</p>
+    <h3>Conexión con el Mundo</h3>
+    <p>Somos parte de una red global de líderes y agentes de cambio. Estamos enlazados con miles de clubes alrededor del planeta, compartiendo valores de servicio, amistad, integridad y paz.</p>
   </section>
 
   <section id="contacto">
     <h2>Buzón de Consultas</h2>
-    <form>
+    <form class="formulario">
       <input type="text" placeholder="Tu nombre">
       <input type="email" placeholder="Tu correo">
       <textarea placeholder="Tu consulta..."></textarea>
@@ -242,7 +183,7 @@
     </form>
 
     <h2>Buzón de Proyectos</h2>
-    <form>
+    <form class="formulario">
       <input type="text" placeholder="Tu nombre o institución">
       <input type="email" placeholder="Tu correo">
       <textarea placeholder="Describe tu idea o propuesta de proyecto..."></textarea>
@@ -250,12 +191,7 @@
     </form>
   </section>
 
-  <a class="whatsapp-float" href="https://wa.me/51942899919?text=Hola%2C%20quisiera%20más%20información%20sobre%20el%20Club%20Rotary%20Huaraz%20Colonial" target="_blank">
-    <img src="whatsapp.png" alt="WhatsApp">
-  </a>
-
   <footer>
-    <p>📍 Huaraz, Áncash, Perú | 📧 club.rotary.huaraz.colonial@gmail.com</p>
     <p>© 2025 Club Rotary Huaraz Colonial – Todos los derechos reservados</p>
   </footer>
 </body>
