@@ -30,11 +30,6 @@
       width: auto;
     }
 
-    .logo-contenedor h1 {
-      margin: 0;
-      font-size: 26px;
-    }
-
     nav {
       margin-top: 10px;
       text-align: center;
@@ -51,22 +46,26 @@
       text-decoration: underline;
     }
 
-    .redes-sociales-visible {
-      background-color: #e6ecf3;
-      padding: 10px;
+    .redes-sociales {
+      margin-top: 10px;
       display: flex;
+      gap: 15px;
+      align-items: center;
       justify-content: center;
-      gap: 30px;
     }
 
-    .redes-sociales-visible img {
-      width: 40px;
-      height: 40px;
-      transition: transform 0.2s;
+    .redes-sociales a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      background-color: #0066cc;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
     }
 
-    .redes-sociales-visible img:hover {
-      transform: scale(1.2);
+    .redes-sociales a:hover {
+      background-color: #004c99;
     }
 
     section {
@@ -115,18 +114,6 @@
       padding: 20px;
     }
 
-    .footer-redes {
-      margin-bottom: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .footer-redes img {
-      width: 32px;
-      height: 32px;
-    }
-
     .whatsapp-float {
       position: fixed;
       width: 60px;
@@ -146,30 +133,66 @@
       text-decoration: none;
     }
 
-    @media screen and (max-width: 768px) {
-      .presidente {
-        flex-direction: column;
-        text-align: center;
-      }
+    .formulario {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
 
-      .mensaje-presidente {
-        max-width: 100%;
-      }
+    .formulario input, .formulario textarea, .formulario button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
 
-      nav {
-        text-align: center;
-        width: 100%;
-      }
+    .formulario button {
+      background-color: #003366;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-      nav a {
-        display: inline-block;
-        margin: 5px;
-      }
+    .formulario button:hover {
+      background-color: #004080;
+    }
+
+    .boton-unete {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #0066cc;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 8px;
+      font-size: 18px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .boton-unete:hover {
+      background-color: #004c99;
+    }
+
+    .galeria img {
+      width: 200px;
+      height: auto;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   </style>
 </head>
 <body>
-
   <header>
     <div class="logo-contenedor">
       <img src="Logo.png" alt="Logo Club Rotary Huaraz Colonial">
@@ -185,17 +208,12 @@
       <a href="#unete">Únete</a>
       <a href="#contacto">Contacto</a>
     </nav>
-  </header>
 
-  <!-- Redes sociales debajo del header -->
-  <div class="redes-sociales-visible">
-    <a href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank" title="Facebook">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-    </a>
-    <a href="https://www.tiktok.com/@club.rotary.huara?_t=ZS-8yVLFuhFyhl&_r=1" target="_blank" title="TikTok">
-      <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
-    </a>
-  </div>
+    <div class="redes-sociales">
+      <a href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank">🟦 Facebook</a>
+      <a href="https://www.tiktok.com/@club.rotary.huara?_t=ZS-8yVDly5OpvN&_r=1" target="_blank">🎵 TikTok</a>
+    </div>
+  </header>
 
   <section id="saludo">
     <div class="presidente">
@@ -226,42 +244,57 @@
 
   <section id="galeria">
     <h2 style="color:#003366;">Galería de Momentos</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
-      <img src="Foto 1.jpg" alt="Foto 1" style="width: 200px; height: auto; border-radius: 8px;">
-      <img src="Foto 2.jpg" alt="Foto 2" style="width: 200px; height: auto; border-radius: 8px;">
-      <img src="Foto 3.jpg" alt="Foto 3" style="width: 200px; height: auto; border-radius: 8px;">
-      <img src="Foto 4.jpg" alt="Foto 4" style="width: 200px; height: auto; border-radius: 8px;">
-      <img src="Foto 5.jpg" alt="Foto 5" style="width: 200px; height: auto; border-radius: 8px;">
+    <div class="galeria">
+      <img src="Foto 1.jpg" alt="Foto 1">
+      <img src="Foto 2.jpg" alt="Foto 2">
+      <img src="Foto 3.jpg" alt="Foto 3">
+      <img src="Foto 4.jpg" alt="Foto 4">
+      <img src="Foto 5.jpg" alt="Foto 5">
     </div>
   </section>
 
   <section id="unete">
-    <h2>¿Quieres unirte?</h2>
-    <p>Si quieres servir a tu comunidad con pasión, responsabilidad y alegría, escríbenos al <a href="https://wa.me/51942899919?text=Hola%2C%20quiero%20unirme%20al%20Club%20Rotary%20Huaraz%20Colonial" target="_blank">WhatsApp del club</a> o visítanos en nuestras reuniones.</p>
+    <h2>Únete al Club</h2>
+    <p>¿Tienes vocación de servicio y quieres transformar tu comunidad? ¡Este es tu lugar!</p>
+    <a class="boton-unete" href="https://wa.me/51942899919" target="_blank">Quiero ser parte del Club</a>
   </section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>📍 Huaraz, Áncash, Perú</p>
-    <p>📧 Email: club.rotary.huaraz.colonial@gmail.com</p>
-    <p>📱 WhatsApp: +51 942 899 919</p>
+  <section id="alianzas">
+    <h2>Empresas e Instituciones</h2>
+    <p>Si representas a una institución o empresa interesada en apoyar nuestras causas, contáctanos. Juntos podemos lograr más.</p>
   </section>
 
-  <a class="whatsapp-float" href="https://wa.me/51942899919?text=Hola%2C%20quisiera%20más%20información%20sobre%20el%20Club%20Rotary%20Huaraz%20Colonial" target="_blank" title="Escríbenos por WhatsApp">
-    💬
-  </a>
+  <section id="mundo">
+    <h2>Conexión con el Mundo</h2>
+    <p>Rotary es una red mundial de líderes y agentes de cambio. Nuestro club está enlazado a miles de clubes en todo el mundo que comparten los mismos valores de servicio, paz y desarrollo.</p>
+  </section>
+
+  <section id="consultas">
+    <h2>Buzón de Consultas</h2>
+    <form class="formulario" action="mailto:club.rotary.huaraz.colonial@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="correo" placeholder="Tu correo" required>
+      <textarea name="mensaje" rows="4" placeholder="Tu consulta..." required></textarea>
+      <button type="submit">Enviar Consulta</button>
+    </form>
+  </section>
+
+  <section id="propuestas">
+    <h2>Buzón de Proyectos</h2>
+    <form class="formulario" action="mailto:club.rotary.huaraz.colonial@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Tu nombre o institución" required>
+      <input type="email" name="correo" placeholder="Tu correo" required>
+      <textarea name="proyecto" rows="4" placeholder="Describe tu idea o propuesta de proyecto..." required></textarea>
+      <button type="submit">Enviar Proyecto</button>
+    </form>
+  </section>
 
   <footer>
-    <div class="footer-redes">
-      <a href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank" title="Facebook">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-      </a>
-      <a href="https://www.tiktok.com/@club.rotary.huara?_t=ZS-8yVLFuhFyhl&_r=1" target="_blank" title="TikTok">
-        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
-      </a>
-    </div>
     <p>© 2025 Club Rotary Huaraz Colonial – Todos los derechos reservados</p>
   </footer>
 
+  <a class="whatsapp-float" href="https://wa.me/51942899919" target="_blank" title="Escríbenos por WhatsApp">
+    💬
+  </a>
 </body>
 </html>
