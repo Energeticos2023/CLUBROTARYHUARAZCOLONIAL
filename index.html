@@ -21,13 +21,35 @@
     .logo-contenedor {
       display: flex;
       align-items: center;
-      gap: 15px;
+      justify-content: space-between;
       flex-wrap: wrap;
+      gap: 15px;
     }
 
     .logo-contenedor img {
       height: 80px;
       width: auto;
+    }
+
+    .logo-contenedor h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .redes-sociales {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .redes-sociales img {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.2s;
+    }
+
+    .redes-sociales img:hover {
+      transform: scale(1.2);
     }
 
     nav {
@@ -44,23 +66,6 @@
 
     nav a:hover {
       text-decoration: underline;
-    }
-
-    .redes-sociales {
-      margin-top: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .redes-sociales img {
-      width: 40px;
-      height: 40px;
-      transition: transform 0.2s;
-    }
-
-    .redes-sociales img:hover {
-      transform: scale(1.2);
     }
 
     section {
@@ -147,6 +152,17 @@
         display: inline-block;
         margin: 5px;
       }
+
+      .logo-contenedor {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .redes-sociales {
+        justify-content: center;
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
@@ -154,8 +170,18 @@
 
   <header>
     <div class="logo-contenedor">
-      <img src="Logo.png" alt="Logo Club Rotary Huaraz Colonial">
-      <h1>Club Rotary Huaraz Colonial</h1>
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="Logo.png" alt="Logo Club Rotary Huaraz Colonial">
+        <h1>Club Rotary Huaraz Colonial</h1>
+      </div>
+      <div class="redes-sociales">
+        <a href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank" title="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+        <a href="https://www.tiktok.com/@club.rotary.huara?_t=ZS-8yVLFuhFyhl&_r=1" target="_blank" title="TikTok">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+        </a>
+      </div>
     </div>
 
     <nav>
@@ -167,16 +193,6 @@
       <a href="#unete">Únete</a>
       <a href="#contacto">Contacto</a>
     </nav>
-
-    <!-- Redes Sociales en el header -->
-    <div class="redes-sociales">
-      <a href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank" title="Facebook">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-      </a>
-      <a href="https://www.tiktok.com/@club.rotary.huara?_t=ZS-8yVLFuhFyhl&_r=1" target="_blank" title="TikTok">
-        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
-      </a>
-    </div>
   </header>
 
   <section id="saludo">
