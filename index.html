@@ -32,6 +32,15 @@
       padding: 5px;
     }
 
+    .frase-rotaria {
+      color: white;
+      font-size: 18px;
+      font-style: italic;
+      line-height: 1.4;
+      flex-grow: 1;
+      padding-left: 20px;
+    }
+
     nav a {
       color: white;
       margin: 0 10px;
@@ -132,14 +141,23 @@
         flex-direction: column;
         text-align: center;
       }
+      .frase-rotaria {
+        text-align: center;
+        padding: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Encabezado con logo, lema y menú -->
   <header>
     <div class="logo-contenedor">
       <img src="Logo.png" alt="Logo Club Rotary">
+    </div>
+    <div class="frase-rotaria">
+      “Dar de sí antes de pensar en sí”<br>
+      <strong>Unidos para hacer el bien</strong>
     </div>
     <nav>
       <a href="#inicio">Inicio</a>
@@ -152,7 +170,6 @@
     </nav>
   </header>
 
-  <!-- Redes sociales arriba -->
   <div class="iconos-redes">
     <a href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank">
       <img src="facebook.png" alt="Facebook" class="icono-red" />
@@ -228,7 +245,6 @@
     </form>
   </section>
 
-  <!-- Redes sociales al final -->
   <div class="iconos-redes">
     <a href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank">
       <img src="facebook.png" alt="Facebook" class="icono-red" />
@@ -238,7 +254,6 @@
     </a>
   </div>
 
-  <!-- WhatsApp flotante -->
   <a class="whatsapp-float" href="https://wa.me/51942899919" target="_blank">
     <img src="whatsapp.png" alt="WhatsApp">
   </a>
