@@ -107,30 +107,20 @@
       color: #003366;
     }
 
-    footer {
-      background-color: #003366;
+    .boton-unete {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #0066cc;
       color: white;
-      text-align: center;
-      padding: 20px;
+      padding: 15px 25px;
+      border-radius: 8px;
+      font-size: 18px;
+      text-decoration: none;
+      transition: background-color 0.3s;
     }
 
-    .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
+    .boton-unete:hover {
+      background-color: #004c99;
     }
 
     .formulario {
@@ -161,34 +151,11 @@
       background-color: #004080;
     }
 
-    .boton-unete {
-      display: inline-block;
-      margin-top: 20px;
-      background-color: #0066cc;
+    footer {
+      background-color: #003366;
       color: white;
-      padding: 15px 25px;
-      border-radius: 8px;
-      font-size: 18px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-
-    .boton-unete:hover {
-      background-color: #004c99;
-    }
-
-    .galeria img {
-      width: 200px;
-      height: auto;
-      margin: 10px;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-
-    .galeria {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      text-align: center;
+      padding: 20px;
     }
   </style>
 </head>
@@ -198,7 +165,6 @@
       <img src="Logo.png" alt="Logo Club Rotary Huaraz Colonial">
       <h1>Club Rotary Huaraz Colonial</h1>
     </div>
-
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#saludo">Saludo</a>
@@ -208,7 +174,6 @@
       <a href="#unete">Únete</a>
       <a href="#contacto">Contacto</a>
     </nav>
-
     <div class="redes-sociales">
       <a href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank">🟦 Facebook</a>
       <a href="https://www.tiktok.com/@club.rotary.huara?_t=ZS-8yVDly5OpvN&_r=1" target="_blank">🎵 TikTok</a>
@@ -243,58 +208,66 @@
   </section>
 
   <section id="galeria">
-    <h2 style="color:#003366;">Galería de Momentos</h2>
-    <div class="galeria">
-      <img src="Foto 1.jpg" alt="Foto 1">
-      <img src="Foto 2.jpg" alt="Foto 2">
-      <img src="Foto 3.jpg" alt="Foto 3">
-      <img src="Foto 4.jpg" alt="Foto 4">
-      <img src="Foto 5.jpg" alt="Foto 5">
+    <h2>Galería de Momentos</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+      <img src="Foto 1.jpg" alt="Foto 1" style="width: 200px; height: auto; border-radius: 8px;">
+      <img src="Foto 2.jpg" alt="Foto 2" style="width: 200px; height: auto; border-radius: 8px;">
+      <img src="Foto 3.jpg" alt="Foto 3" style="width: 200px; height: auto; border-radius: 8px;">
+      <img src="Foto 4.jpg" alt="Foto 4" style="width: 200px; height: auto; border-radius: 8px;">
+      <img src="Foto 5.jpg" alt="Foto 5" style="width: 200px; height: auto; border-radius: 8px;">
     </div>
   </section>
 
   <section id="unete">
-    <h2>Únete al Club</h2>
-    <p>¿Tienes vocación de servicio y quieres transformar tu comunidad? ¡Este es tu lugar!</p>
-    <a class="boton-unete" href="https://wa.me/51942899919" target="_blank">Quiero ser parte del Club</a>
+    <h2>¿Quieres unirte?</h2>
+    <p>Si deseas formar parte de una organización comprometida con la comunidad, con liderazgo, valores y vocación de servicio, ¡este es tu lugar!</p>
+    <a href="https://wa.me/51942899919?text=Hola%2C%20quiero%20unirme%20al%20Club%20Rotary%20Huaraz%20Colonial" class="boton-unete" target="_blank">Únete al Club Rotary Huaraz Colonial</a>
   </section>
 
-  <section id="alianzas">
-    <h2>Empresas e Instituciones</h2>
-    <p>Si representas a una institución o empresa interesada en apoyar nuestras causas, contáctanos. Juntos podemos lograr más.</p>
+  <section>
+    <h2>Empresas e Instituciones aliadas</h2>
+    <p>Invitamos a empresas e instituciones a sumarse a nuestras causas solidarias mediante alianzas estratégicas que potencien el impacto social.</p>
   </section>
 
-  <section id="mundo">
-    <h2>Conexión con el Mundo</h2>
-    <p>Rotary es una red mundial de líderes y agentes de cambio. Nuestro club está enlazado a miles de clubes en todo el mundo que comparten los mismos valores de servicio, paz y desarrollo.</p>
+  <section>
+    <h2>Conexión con el mundo</h2>
+    <p>Somos parte de Rotary International, una red global de líderes unidos para generar cambios duraderos en nuestras comunidades y más allá.</p>
   </section>
 
-  <section id="consultas">
+  <section>
     <h2>Buzón de Consultas</h2>
-    <form class="formulario" action="mailto:club.rotary.huaraz.colonial@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="correo" placeholder="Tu correo" required>
-      <textarea name="mensaje" rows="4" placeholder="Tu consulta..." required></textarea>
-      <button type="submit">Enviar Consulta</button>
+    <form class="formulario">
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo electrónico" required>
+      <textarea rows="4" placeholder="Tu consulta"></textarea>
+      <button type="submit">Enviar consulta</button>
     </form>
   </section>
 
-  <section id="propuestas">
+  <section>
     <h2>Buzón de Proyectos</h2>
-    <form class="formulario" action="mailto:club.rotary.huaraz.colonial@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="nombre" placeholder="Tu nombre o institución" required>
-      <input type="email" name="correo" placeholder="Tu correo" required>
-      <textarea name="proyecto" rows="4" placeholder="Describe tu idea o propuesta de proyecto..." required></textarea>
-      <button type="submit">Enviar Proyecto</button>
+    <form class="formulario">
+      <input type="text" placeholder="Nombre del proyecto" required>
+      <input type="email" placeholder="Correo de contacto" required>
+      <textarea rows="4" placeholder="Describe tu proyecto"></textarea>
+      <button type="submit">Enviar propuesta</button>
     </form>
   </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📍 Huaraz, Áncash, Perú</p>
+    <p>📧 Email: club.rotary.huaraz.colonial@gmail.com</p>
+    <p>📱 WhatsApp: +51 942 899 919</p>
+  </section>
+
+  <a class="whatsapp-float" href="https://wa.me/51942899919?text=Hola%2C%20quisiera%20más%20información%20sobre%20el%20Club%20Rotary%20Huaraz%20Colonial" target="_blank" title="Escríbenos por WhatsApp">
+    💬
+  </a>
 
   <footer>
     <p>© 2025 Club Rotary Huaraz Colonial – Todos los derechos reservados</p>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/51942899919" target="_blank" title="Escríbenos por WhatsApp">
-    💬
-  </a>
 </body>
 </html>
