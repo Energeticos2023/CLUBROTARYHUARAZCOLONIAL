@@ -31,9 +31,6 @@
       line-height: 1.65;
     }
 
-    a{ color: inherit; text-decoration: none; }
-    a:hover{ text-decoration: underline; }
-
     .container{
       max-width: var(--maxw);
       margin: 0 auto;
@@ -43,7 +40,7 @@
     header{
       background: linear-gradient(90deg, var(--rotary-blue), var(--rotary-blue-2));
       color:#fff;
-      padding: 22px 0 18px 0;
+      padding: 18px 0;
       position: sticky;
       top:0;
       z-index: 50;
@@ -61,7 +58,7 @@
     .brand{
       display:flex;
       align-items:center;
-      gap:14px;
+      gap:12px;
       min-width: 260px;
     }
 
@@ -76,6 +73,7 @@
       justify-content:center;
       overflow:hidden;
       flex: 0 0 48px;
+      border: 1px solid rgba(255,255,255,.22);
     }
 
     .logo img{
@@ -96,6 +94,7 @@
       margin: 2px 0 0 0;
       font-size: 12px;
       color: rgba(255,255,255,.85);
+      font-weight: 600;
     }
 
     nav{
@@ -108,16 +107,15 @@
     .navlink{
       display:inline-flex;
       align-items:center;
-      gap:8px;
       padding: 9px 12px;
       border-radius: 999px;
       background: rgba(255,255,255,.12);
       color:#fff;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 13px;
       border: 1px solid rgba(255,255,255,.18);
       transition: .15s ease;
-      text-decoration:none !important;
+      text-decoration:none;
     }
 
     .navlink:hover{
@@ -125,21 +123,21 @@
       transform: translateY(-1px);
     }
 
-    .hero{
-      padding: 30px 0 16px 0;
-    }
-
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:16px;
-    }
+    main{ padding: 26px 0 40px 0; }
 
     .card{
       background: var(--card);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 22px;
+    }
+
+    .block{
+      margin-top: 16px;
+      padding: 24px;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
 
     .kicker{
@@ -162,7 +160,7 @@
     h3{
       margin: 0 0 14px 0;
       color: var(--muted);
-      font-weight: 700;
+      font-weight: 800;
       font-size: 14px;
     }
 
@@ -170,6 +168,13 @@
       font-size: 15px;
       color: var(--muted);
       margin: 0;
+      font-weight: 600;
+    }
+
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:16px;
     }
 
     .ctaRow{
@@ -183,14 +188,13 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap:10px;
       padding: 10px 14px;
       border-radius: 12px;
       font-weight: 900;
       border: 0;
       cursor:pointer;
       transition: .15s ease;
-      text-decoration:none !important;
+      text-decoration:none;
     }
 
     .btnPrimary{
@@ -207,28 +211,12 @@
     }
     .btnGold:hover{ transform: translateY(-1px); }
 
-    .miniGrid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .mini{
-      padding: 14px;
-      border-radius: 14px;
-      background: linear-gradient(180deg, rgba(23,69,143,.06), rgba(247,168,27,.06));
-      border: 1px solid rgba(0,0,0,.06);
-    }
-    .mini strong{ color: var(--rotary-blue); }
-
     .asideQuote{
       border-left: 6px solid var(--rotary-blue);
       background: rgba(23,69,143,.06);
       border-radius: 14px;
       padding: 16px;
-      font-weight: 800;
-      color: var(--text);
+      font-weight: 900;
     }
 
     .quoteSmall{
@@ -238,14 +226,28 @@
       font-size: 13px;
     }
 
-    /* BLOQUES (SECCIONES) */
-    .block{
-      margin-top: 16px;
-      padding: 24px;
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+    .socialRow{
+      display:flex;
+      gap:10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
     }
+
+    .socialBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 900;
+      border: 1px solid rgba(0,0,0,.08);
+      background:#fff;
+      box-shadow: 0 10px 22px rgba(0,0,0,.08);
+      transition: .15s ease;
+      text-decoration:none;
+      color: var(--text);
+    }
+    .socialBtn:hover{ transform: translateY(-1px); }
 
     .metaRow{
       display:flex;
@@ -256,7 +258,6 @@
 
     .pill{
       display:inline-flex;
-      gap:8px;
       align-items:center;
       padding: 8px 12px;
       border-radius: 999px;
@@ -273,7 +274,6 @@
       border: 1px solid rgba(247,168,27,.22);
     }
 
-    /* PRESIDENTE */
     .presiWrap{
       display:grid;
       grid-template-columns: 240px 1fr;
@@ -303,7 +303,6 @@
       color: var(--rotary-blue);
     }
 
-    /* GALERÍA */
     .gallery{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -336,10 +335,9 @@
       font-size: 13px;
       color: var(--muted);
       border-top: 1px solid rgba(0,0,0,.06);
-      font-weight: 700;
+      font-weight: 800;
     }
 
-    /* CONTACTO */
     .contactGrid{
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -360,30 +358,26 @@
       margin-bottom: 6px;
     }
 
-    .socialRow{
+    footer{
+      margin-top: 18px;
+      padding: 22px 0 30px 0;
+      color: rgba(255,255,255,.92);
+      background: linear-gradient(90deg, var(--rotary-blue), var(--rotary-blue-2));
+    }
+
+    footer .footGrid{
       display:flex;
-      gap:10px;
+      gap: 14px;
+      justify-content: space-between;
       flex-wrap: wrap;
-      margin-top: 10px;
-    }
-
-    .socialBtn{
-      display:inline-flex;
       align-items:center;
-      justify-content:center;
-      padding: 10px 14px;
-      border-radius: 12px;
-      font-weight: 900;
-      border: 1px solid rgba(0,0,0,.08);
-      background:#fff;
-      box-shadow: 0 10px 22px rgba(0,0,0,.08);
-      transition: .15s ease;
-      text-decoration: none !important;
-      color: var(--text);
     }
-    .socialBtn:hover{ transform: translateY(-1px); }
 
-    /* WHATSAPP FLOAT */
+    footer small{
+      color: rgba(255,255,255,.85);
+      font-weight: 700;
+    }
+
     .waFloat{
       position: fixed;
       right: 18px;
@@ -398,6 +392,7 @@
       justify-content:center;
       z-index: 100;
       border: 2px solid rgba(255,255,255,.9);
+      text-decoration:none;
     }
 
     .waFloat svg{
@@ -406,7 +401,6 @@
       fill: #fff;
     }
 
-    /* MODAL (AMPLIAR FOTO) */
     .modal{
       position: fixed;
       inset:0;
@@ -438,7 +432,7 @@
       padding: 10px 12px;
       background: rgba(255,255,255,.06);
       color:#fff;
-      font-weight: 800;
+      font-weight: 900;
       font-size: 13px;
     }
 
@@ -459,30 +453,8 @@
       background:#000;
     }
 
-    footer{
-      margin-top: 18px;
-      padding: 22px 0 30px 0;
-      color: rgba(255,255,255,.92);
-      background: linear-gradient(90deg, var(--rotary-blue), var(--rotary-blue-2));
-    }
-
-    footer .footGrid{
-      display:flex;
-      gap: 14px;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      align-items:center;
-    }
-
-    footer small{
-      color: rgba(255,255,255,.85);
-      font-weight: 700;
-    }
-
-    /* RESPONSIVE */
     @media (max-width: 980px){
       .heroGrid{ grid-template-columns: 1fr; }
-      .miniGrid{ grid-template-columns: 1fr; }
       .presiWrap{ grid-template-columns: 1fr; }
       .presiPhoto{ width: 100%; height: 320px; }
       nav{ justify-content: flex-start; }
@@ -492,14 +464,12 @@
 </head>
 
 <body>
-
   <header>
     <div class="container">
       <div class="topbar">
         <div class="brand">
           <div class="logo">
-            <!-- Si tienes logo real, pon Logo.png en la misma carpeta -->
-            <img src="LCRHC.png" alt="Logo Club Rotary Huaraz Colonial" onerror="this.style.display='none';" />
+            <img src="Logo.png" alt="Logo Club Rotary Huaraz Colonial" onerror="this.style.display='none';" />
           </div>
           <div>
             <h1>Club Rotary Huaraz Colonial</h1>
@@ -514,7 +484,6 @@
           <a class="navlink" href="#talento-solar">Talento Solar</a>
           <a class="navlink" href="#laboratorio-solar">Laboratorio Solar</a>
           <a class="navlink" href="#luminarias-llupa">Luminarias Llupa</a>
-          <a class="navlink" href="#navidad-Unchus">Navidad Unchus</a>
           <a class="navlink" href="#navidad-caraz">Navidad Caraz</a>
           <a class="navlink" href="#contacto">Contacto</a>
         </nav>
@@ -522,488 +491,385 @@
     </div>
   </header>
 
-  <main id="inicio" class="hero">
-    <div class="container">
-      <div class="heroGrid">
-        <!-- HERO PRINCIPAL -->
-        <section class="card">
-          <span class="kicker">Dar de sí antes de pensar en sí</span>
-          <h2>Una memoria viva de acción rotaria: impacto real, narrado con claridad y con identidad</h2>
-          <p class="lead">
-            Esta página reúne, sin descartar nada, los hitos y actividades del <strong>primer semestre 2025</strong> del
-            <strong>Club Rotary Huaraz Colonial</strong>: liderazgo institucional, servicio social y formación técnica en energías renovables,
-            con resultados visibles en el territorio.
-          </p>
-
-          <div class="ctaRow">
-            <a class="btn btnPrimary" href="#presidencia">Leer mensaje del presidente</a>
-            <a class="btn btnGold" href="#contacto">Contactar / WhatsApp</a>
-          </div>
-
-          <div class="miniGrid">
-            <div class="mini">
-              <strong>Identidad</strong><br/>
-              Presencia institucional que fortalece unidad y confianza.
-            </div>
-            <div class="mini">
-              <strong>Servicio</strong><br/>
-              Acciones directas en infancia, comunidad y bienestar.
-            </div>
-            <div class="mini">
-              <strong>Futuro</strong><br/>
-              Formación técnica y energía limpia para transformar realidades.
-            </div>
-          </div>
-        </section>
-
-        <!-- ASIDE / FRASE -->
-        <aside class="card">
-          <div class="asideQuote">
-            “En Rotary, el liderazgo no se declara: se demuestra.  
-            Y se demuestra cuando el servicio se convierte en resultados que permanecen.”
-          </div>
-          <div class="quoteSmall">
-            Primer semestre 2025 · Club Rotary Huaraz Colonial · Áncash, Perú
-          </div>
-
-          <div class="socialRow" style="margin-top:16px;">
-            <a class="socialBtn" href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank" rel="noopener">Facebook</a>
-            <a class="socialBtn" href="https://www.tiktok.com/@club.rotary.huara?_r=1&_t=ZS-92Tii6WdCr3" target="_blank" rel="noopener">TikTok</a>
-            <a class="socialBtn" href="https://wa.me/51942899919?text=Hola%2C%20deseo%20contactar%20al%20Club%20Rotary%20Huaraz%20Colonial" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </aside>
-      </div>
-
-      <!-- MENSAJE DEL PRESIDENTE -->
-      <section id="presidencia" class="block">
-        <span class="kicker">Presidencia 2025–2026</span>
-        <h2>Mensaje del Presidente: liderazgo que se traduce en acción</h2>
-        <h3>José Rafael Zeña Peche · Club Rotary Huaraz Colonial</h3>
-
-        <div class="presiWrap">
-          <div class="presiPhoto">
-            <!-- Coloca PR.jpg en la misma carpeta -->
-            <img src="PR.jpg" alt="Presidente José Rafael Zeña Peche" />
-          </div>
-
-          <div>
-            <p>
-              Querida comunidad de Huaraz, de Áncash y del Perú:
-              el servicio rotario no es un acto simbólico; es una forma de liderazgo.
-              En este primer semestre hemos demostrado que cuando la voluntad se organiza y el propósito se ejecuta,
-              el impacto deja de ser una promesa y se convierte en realidad.
-            </p>
-
-            <p>
-              Hemos acompañado a la niñez con presencia y afecto, hemos fortalecido la cohesión institucional con
-              liderazgo y planificación, y hemos impulsado formación técnica en energía solar porque creemos en un
-              futuro que se construye preparando personas capaces de actuar.
-            </p>
-
-            <p>
-              Nuestra visión es simple y exigente: <strong>servir con calidad, con ética y con continuidad</strong>.
-              Que cada actividad no sea un evento aislado, sino un paso coherente hacia proyectos sostenibles que
-              mejoren la vida de las familias y fortalezcan la esperanza en nuestras comunidades.
-            </p>
-
-            <div class="signature">
-              José Rafael Zeña Peche<br/>
-              Presidente 2025–2026 · Club Rotary Huaraz Colonial
-            </div>
-
-            <div class="metaRow" style="margin-top:14px;">
-              <span class="pill">Unidad</span>
-              <span class="pill">Trabajo en equipo</span>
-              <span class="pill pillGold">Impacto real</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- VISITA GOBERNADORA -->
-      <section id="visita-gobernadora" class="block">
-        <span class="kicker">Hito institucional</span>
-        <h2>Visita de Gobernadora Distrital 4465</h2>
-        <h3>Identidad, presencia, cohesión y rumbo institucional</h3>
-
-        <p>
-          La visita oficial de la Gobernadora Distrital fortaleció la unidad del club, consolidó compromisos
-          y ratificó que el servicio se sostiene en liderazgo compartido, coherencia y cercanía con la realidad del territorio.
+  <main class="container" id="inicio">
+    <section class="heroGrid">
+      <div class="card">
+        <span class="kicker">Dar de sí antes de pensar en sí</span>
+        <h2>Una memoria viva de acción rotaria: impacto real, narrado con claridad y con identidad</h2>
+        <p class="lead">
+          Esta página reúne los hitos del <strong>primer semestre 2025</strong> del <strong>Club Rotary Huaraz Colonial</strong>:
+          liderazgo institucional, servicio social y formación técnica en energías renovables, con resultados en el territorio.
         </p>
 
-        <div class="metaRow">
-          <span class="pill">Territorio</span>
-          <span class="pill">Unidad</span>
-          <span class="pill pillGold">Reconocimiento</span>
-        </div>
-
-        <div class="gallery">
-          <!-- Ajusta nombres según tus archivos reales -->
-          <figure data-full="VG1.jpg" data-cap="Visita Gobernadora — Identidad y presencia.">
-            <img src="VG1.jpg" alt="Visita Gobernadora 1" />
-            <figcaption>VG1 · Identidad y presencia</figcaption>
-          </figure>
-          <figure data-full="VG2.jpg" data-cap="Visita Gobernadora — Reconocimiento.">
-            <img src="VG2.jpg" alt="Visita Gobernadora 2" />
-            <figcaption>VG2 · Reconocimiento</figcaption>
-          </figure>
-          <figure data-full="VG3.jpg" data-cap="Visita Gobernadora — Momento institucional.">
-            <img src="VG3.jpg" alt="Visita Gobernadora 3" />
-            <figcaption>VG3 · Momento institucional</figcaption>
-          </figure>
-          <figure data-full="VG4.jpg" data-cap="Visita Gobernadora — Gratitud.">
-            <img src="VG4.jpg" alt="Visita Gobernadora 4" />
-            <figcaption>VG4 · Gratitud</figcaption>
-          </figure>
-          <figure data-full="VG5.jpg" data-cap="Visita Gobernadora — Cohesión.">
-            <img src="VG5.jpg" alt="Visita Gobernadora 5" />
-            <figcaption>VG5 · Cohesión</figcaption>
-          </figure>
-          <figure data-full="VG6.jpg" data-cap="Visita Gobernadora — Liderazgo compartido.">
-            <img src="VG6.jpg" alt="Visita Gobernadora 6" />
-            <figcaption>VG6 · Liderazgo compartido</figcaption>
-          </figure>
-          <figure data-full="VG7.jpg" data-cap="Visita Gobernadora — Unidad.">
-            <img src="VG7.jpg" alt="Visita Gobernadora 7" />
-            <figcaption>VG7 · Unidad</figcaption>
-          </figure>
-          <figure data-full="VG8.jpg" data-cap="Visita Gobernadora — Encuentro rotario.">
-            <img src="VG8.jpg" alt="Visita Gobernadora 8" />
-            <figcaption>VG8 · Encuentro rotario</figcaption>
-          </figure>
-          <figure data-full="VG9.jpg" data-cap="Visita Gobernadora — Planificación.">
-            <img src="VG9.jpg" alt="Visita Gobernadora 9" />
-            <figcaption>VG9 · Planificación</figcaption>
-          </figure>
-          <figure data-full="VG10.jpg" data-cap="Visita Gobernadora — Equipo en acción.">
-            <img src="VG10.jpg" alt="Visita Gobernadora 10" />
-            <figcaption>VG10 · Equipo en acción</figcaption>
-          </figure>
-        </div>
-
-        <p style="margin-top:14px; color:var(--muted); font-weight:700;">
-          
-        </p>
-      </section>
-
-      <!-- TALENTO SOLAR -->
-      <section id="talento-solar" class="block">
-        <span class="kicker">Formación técnica</span>
-        <h2>Talento Solar: capacitación en sistemas fotovoltaicos</h2>
-        <h3>IESTP “Eleazar Guzmán Barrón” · Comprender, ejecutar y multiplicar soluciones</h3>
-
-        <p>
-          La transición energética se construye formando personas capaces de diseñar, instalar, operar y mantener soluciones reales.
-          Bajo ese enfoque, el club impulsó una capacitación con metodología práctica:
-          <strong>primero comprender, luego ejecutar</strong>.
-        </p>
-
-        <div class="metaRow">
-          <span class="pill">Aprender haciendo</span>
-          <span class="pill">Seguridad y calidad</span>
-          <span class="pill pillGold">Empleabilidad</span>
-        </div>
-
-        <div class="gallery">
-          <!-- Usa CC1.jpg ... CC7.jpg (o ajusta a tus nombres reales) -->
-          <figure data-full="CC1.jpg" data-cap="Talento Solar — sesión formativa y exposición técnica.">
-            <img src="CC1.jpg" alt="Talento Solar 1" />
-            <figcaption>CC1 · Sesión formativa</figcaption>
-          </figure>
-          <figure data-full="CC2.jpg" data-cap="Talento Solar — explicación en aula.">
-            <img src="CC2.jpg" alt="Talento Solar 2" />
-            <figcaption>CC2 · Explicación</figcaption>
-          </figure>
-          <figure data-full="CC3.jpg" data-cap="Talento Solar — demostración práctica.">
-            <img src="CC3.jpg" alt="Talento Solar 3" />
-            <figcaption>CC3 · Demostración</figcaption>
-          </figure>
-          <figure data-full="CC4.jpg" data-cap="Talento Solar — práctica frente a instalación real.">
-            <img src="CC4.jpg" alt="Talento Solar 4" />
-            <figcaption>CC4 · Práctica en sitio</figcaption>
-          </figure>
-          <figure data-full="CC5.jpg" data-cap="Talento Solar — interacción con estudiantes.">
-            <img src="CC5.jpg" alt="Talento Solar 5" />
-            <figcaption>CC5 · Interacción</figcaption>
-          </figure>
-          <figure data-full="CC6.jpg" data-cap="Talento Solar — visita y observación técnica.">
-            <img src="CC6.jpg" alt="Talento Solar 6" />
-            <figcaption>CC6 · Observación</figcaption>
-          </figure>
-          <figure data-full="CC7.jpg" data-cap="Talento Solar — cierre y registro de jornada.">
-            <img src="CC7.jpg" alt="Talento Solar 7" />
-            <figcaption>CC7 · Cierre</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <!-- LABORATORIO SOLAR -->
-      <section id="laboratorio-solar" class="block">
-        <span class="kicker">Proyecto educativo</span>
-        <h2>Donación de Laboratorio Solar (sistema fotovoltaico on-grid)</h2>
-        <h3>IESTP “Eleazar Guzmán Barrón” · Capacidad instalada para formar el futuro</h3>
-
-        <p>
-          El <strong>Club Rotary Huaraz Colonial</strong> realizó la donación de un
-          <strong>sistema fotovoltaico conectado a red (on-grid)</strong>, valorizado en
-          <strong>US$ 7,000</strong>, para fortalecer la formación técnica práctica en energías renovables.
-        </p>
-
-        <div class="metaRow">
-          <span class="pill">Sistema on-grid</span>
-          <span class="pill pillGold">Valorizado: US$ 7,000</span>
-          <span class="pill">Formación práctica</span>
-        </div>
-
-        <div class="gallery">
-          <figure data-full="SFV1.jpg" data-cap="Donación e implementación del laboratorio solar.">
-            <img src="SFV1.jpg" alt="Laboratorio Solar 1" />
-            <figcaption>SFV1 · Implementación</figcaption>
-          </figure>
-          <figure data-full="SFV2.jpg" data-cap="Acto institucional y presentación del proyecto.">
-            <img src="SFV2.jpg" alt="Laboratorio Solar 2" />
-            <figcaption>SFV2 · Acto institucional</figcaption>
-          </figure>
-          <figure data-full="SFV3.jpg" data-cap="Sesión informativa: fundamentos y propósito.">
-            <img src="SFV3.jpg" alt="Laboratorio Solar 3" />
-            <figcaption>SFV3 · Sesión informativa</figcaption>
-          </figure>
-          <figure data-full="SFV4.jpg" data-cap="Servicio con propósito: educación que queda.">
-            <img src="SFV4.jpg" alt="Laboratorio Solar 4" />
-            <figcaption>SFV4 · Servicio</figcaption>
-          </figure>
-          <figure data-full="SFV5.jpg" data-cap="Documentación y soporte del proyecto.">
-            <img src="SFV5.jpg" alt="Laboratorio Solar 5" />
-            <figcaption>SFV5 · Soporte</figcaption>
-          </figure>
-          <figure data-full="SFV6.jpg" data-cap="Demostración de componentes y configuración.">
-            <img src="SFV6.jpg" alt="Laboratorio Solar 6" />
-            <figcaption>SFV6 · Componentes</figcaption>
-          </figure>
-          <figure data-full="SFV7.jpg" data-cap="Sesión educativa con enfoque práctico.">
-            <img src="SFV7.jpg" alt="Laboratorio Solar 7" />
-            <figcaption>SFV7 · Enfoque práctico</figcaption>
-          </figure>
-          <figure data-full="SFV8.jpg" data-cap="Trabajo colaborativo y articulación institucional.">
-            <img src="SFV8.jpg" alt="Laboratorio Solar 8" />
-            <figcaption>SFV8 · Articulación</figcaption>
-          </figure>
-          <figure data-full="SFV9.jpg" data-cap="Evidencia del proyecto y resultados.">
-            <img src="SFV9.jpg" alt="Laboratorio Solar 9" />
-            <figcaption>SFV9 · Resultados</figcaption>
-          </figure>
-          <figure data-full="SFV10.jpg" data-cap="Formación y motivación de la comunidad educativa.">
-            <img src="SFV10.jpg" alt="Laboratorio Solar 10" />
-            <figcaption>SFV10 · Comunidad educativa</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <!-- LUMINARIAS LLUPA -->
-      <section id="luminarias-llupa" class="block">
-        <span class="kicker">Energía limpia en territorio</span>
-        <h2>Donación de luminarias solares · Llupa</h2>
-        <h3>Iluminación del frontis de la Municipalidad del Centro Poblado de Llupa</h3>
-
-        <p>
-          Se realizó la entrega de <strong>5 luminarias solares</strong> para fortalecer la seguridad y mejorar el entorno urbano,
-          reafirmando el compromiso con soluciones sostenibles y de impacto directo.
-        </p>
-
-        <div class="metaRow">
-          <span class="pill">Seguridad ciudadana</span>
-          <span class="pill">Energía limpia</span>
-          <span class="pill pillGold">Impacto directo</span>
-        </div>
-
-        <div class="gallery">
-          <figure data-full="LS1.jpg" data-cap="Entrega luminaria solar (1).">
-            <img src="LS1.jpg" alt="Luminarias Llupa 1" />
-            <figcaption>Llupa · LS1</figcaption>
-          </figure>
-          <figure data-full="LS2.jpg" data-cap="Entrega luminaria solar (2).">
-            <img src="LS2.jpg" alt="Luminarias Llupa 2" />
-            <figcaption>Llupa · LS2</figcaption>
-          </figure>
-          <figure data-full="LS3.jpg" data-cap="Entrega luminaria solar (3).">
-            <img src="LS3.jpg" alt="Luminarias Llupa 3" />
-            <figcaption>Llupa · LS3</figcaption>
-          </figure>
-          <figure data-full="LS4.jpg" data-cap="Registro del proyecto (4).">
-            <img src="LS4.jpg" alt="Luminarias Llupa 4" />
-            <figcaption>Llupa · LS4</figcaption>
-          </figure>
-          <figure data-full="LS5.jpg" data-cap="Cierre y evidencia (5).">
-            <img src="LS5.jpg" alt="Luminarias Llupa 5" />
-            <figcaption>Llupa · LS5</figcaption>
-          </figure>
-        </div>
-      </section>
-
-<!-- NAVIDAD UNCHUS -->
-  <section id="navidad-unchus" class="block">
-    <span class="kicker">Servicio social · Navidad</span>
-<h2>Navidad en Unchus: Algarabía</h2>
-<h3>Niñez en el centro · Alegría, cuidado y pertenencia</h3>
-<p style="font-weight:900; color:var(--rotary-blue); margin-top:0;">
-          La magia de Rotary se hizo presente esta Navidad.
-        </p>
-
-        <p>
-          Con el corazón lleno de amor y servicio, el <strong>Club Rotary Huaraz Colonial</strong> llegó hasta el
-          <strong>CEI María Candelaria del Villar</strong>, en <strong>Caraz</strong>, para compartir una mañana inolvidable
-          junto a nuestros niños y niñas.
-        </p>
-
-        <p>
-          Risas, abrazos, regalos y miradas llenas de ilusión nos recordaron que la verdadera Navidad vive en los pequeños gestos,
-          en el tiempo compartido y en la alegría sincera de servir. Cada sonrisa fue un regalo para nosotros, una confirmación de que
-          cuando trabajamos unidos, el amor se multiplica y la esperanza florece.
-        </p>
-
-        <p>
-          Gracias a cada socia, socio y voluntario que hizo posible esta hermosa jornada. Seguiremos caminando junto a nuestras comunidades,
-          convencidos de que servir transforma vidas.
-        </p>
-
-        <p style="font-weight:900; color:var(--rotary-blue-2);">
-          Porque en Rotary, la Navidad es todo el año cuando servimos con el corazón.
-        </p>
-
-<div class="gallery">
-          <figure data-full="N1.jpg" data-cap="UNCHUS — jornada navideña.">
-            <img src="N1.jpg" alt="Navidad Unchus 1" />
-            <figcaption>Unchus · N1</figcaption>
-          </figure>
-          <figure data-full="N2.jpg" data-cap="Navidad Rotary — cercanía y alegría compartida.">
-            <img src="N2.jpg" alt="Navidad Unchus 2" />
-            <figcaption>Caraz · N2</figcaption>
-          </figure>
-          <figure data-full="N3.jpg" data-cap="Acompañamiento y vínculo humano real.">
-            <img src="N3.jpg" alt="Navidad Unchus 3" />
-            <figcaption>Caraz · N3</figcaption>
-          </figure>
-          <figure data-full="N4.jpg" data-cap="Entrega solidaria y participación activa.">
-            <img src="N4.jpg" alt="Navidad Unchus 4" />
-            <figcaption>Caraz · NC4</figcaption>
-          </figure>
-          <figure data-full="N5.jpg" data-cap="Ilusión y gratitud: niñez al centro.">
-            <img src="N5.jpg" alt="Navidad Unchus 5" />
-            <figcaption>Caraz · N5</figcaption>
-          </figure>
-          <figure data-full="N6.jpg" data-cap="Cierre con unidad y esperanza.">
-            <img src="NC6.jpg" alt="Navidad Unchus 6" />
-            <figcaption>Caraz · N6</figcaption>
-          </figure>
-        </div>
-      </section>
-
-
-      <!-- NAVIDAD CARAZ -->
-      <section id="navidad-caraz" class="block">
-        <span class="kicker">Servicio social · Navidad</span>
-        <h2>Navidad en Caraz: CEI María Candelaria del Villar</h2>
-        <h3>Niñez en el centro · Alegría, cuidado y pertenencia</h3>
-
-        <p style="font-weight:900; color:var(--rotary-blue); margin-top:0;">
-          La magia de Rotary se hizo presente esta Navidad.
-        </p>
-
-        <p>
-          Con el corazón lleno de amor y servicio, el <strong>Club Rotary Huaraz Colonial</strong> llegó hasta el
-          <strong>CEI María Candelaria del Villar</strong>, en <strong>Caraz</strong>, para compartir una mañana inolvidable
-          junto a nuestros niños y niñas.
-        </p>
-
-        <p>
-          Risas, abrazos, regalos y miradas llenas de ilusión nos recordaron que la verdadera Navidad vive en los pequeños gestos,
-          en el tiempo compartido y en la alegría sincera de servir. Cada sonrisa fue un regalo para nosotros, una confirmación de que
-          cuando trabajamos unidos, el amor se multiplica y la esperanza florece.
-        </p>
-
-        <p>
-          Gracias a cada socia, socio y voluntario que hizo posible esta hermosa jornada. Seguiremos caminando junto a nuestras comunidades,
-          convencidos de que servir transforma vidas.
-        </p>
-
-        <p style="font-weight:900; color:var(--rotary-blue-2);">
-          Porque en Rotary, la Navidad es todo el año cuando servimos con el corazón.
-        </p>
-
-        <div class="gallery">
-          <figure data-full="NC1.jpg" data-cap="CEI María Candelaria del Villar (Caraz) — jornada navideña.">
-            <img src="NC1.jpg" alt="Navidad Caraz 1" />
-            <figcaption>Caraz · NC1</figcaption>
-          </figure>
-          <figure data-full="NC2.jpg" data-cap="Navidad Rotary — cercanía y alegría compartida.">
-            <img src="NC2.jpg" alt="Navidad Caraz 2" />
-            <figcaption>Caraz · NC2</figcaption>
-          </figure>
-          <figure data-full="NC3.jpg" data-cap="Acompañamiento y vínculo humano real.">
-            <img src="NC3.jpg" alt="Navidad Caraz 3" />
-            <figcaption>Caraz · NC3</figcaption>
-          </figure>
-          <figure data-full="NC4.jpg" data-cap="Entrega solidaria y participación activa.">
-            <img src="NC4.jpg" alt="Navidad Caraz 4" />
-            <figcaption>Caraz · NC4</figcaption>
-          </figure>
-          <figure data-full="NC5.jpg" data-cap="Ilusión y gratitud: niñez al centro.">
-            <img src="NC5.jpg" alt="Navidad Caraz 5" />
-            <figcaption>Caraz · NC5</figcaption>
-          </figure>
-          <figure data-full="NC6.jpg" data-cap="Cierre con unidad y esperanza.">
-            <img src="NC6.jpg" alt="Navidad Caraz 6" />
-            <figcaption>Caraz · NC6</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <!-- CONTACTO -->
-      <section id="contacto" class="block">
-        <span class="kicker">Contacto institucional</span>
-        <h2>Conversemos: alianzas, voluntariado y proyectos</h2>
-        <h3>Acceso con un clic a WhatsApp, Facebook y TikTok</h3>
-
-        <div class="contactGrid">
-          <div class="contactItem">
-            <strong>WhatsApp / Teléfono</strong>
-            <a href="tel:+51942899919">+51 942 899 919</a><br/>
-            <a href="https://wa.me/51942899919?text=Hola%2C%20deseo%20contactar%20al%20Club%20Rotary%20Huaraz%20Colonial" target="_blank" rel="noopener">
-              Abrir WhatsApp con mensaje
-            </a>
-          </div>
-
-          <div class="contactItem">
-            <strong>Correo institucional</strong>
-            <a href="mailto:rotary.club.huaraz.colonial@gmail.com">rotary.club.huaraz.colonial@gmail.com</a>
-          </div>
-
-          <div class="contactItem">
-            <strong>Dirección</strong>
-            Jr. Augusto B. Leguía 563
-          </div>
-
-          <div class="contactItem">
-            <strong>Redes oficiales</strong>
-            <div class="socialRow">
-              <a class="socialBtn" href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank" rel="noopener">Ir a Facebook</a>
-              <a class="socialBtn" href="https://www.tiktok.com/@club.rotary.huara?_r=1&_t=ZS-92Tii6WdCr3" target="_blank" rel="noopener">Ir a TikTok</a>
-              <a class="socialBtn" href="https://wa.me/51942899919" target="_blank" rel="noopener">Ir a WhatsApp</a>
-            </div>
-          </div>
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="#presidencia">Leer mensaje del presidente</a>
+          <a class="btn btnGold" href="#contacto">Contactar / WhatsApp</a>
         </div>
 
         <div class="metaRow" style="margin-top:14px;">
-          <span class="pill">Voluntariado</span>
-          <span class="pill">Empresas aliadas</span>
-          <span class="pill pillGold">Proyectos con impacto</span>
+          <span class="pill">Identidad</span>
+          <span class="pill">Servicio</span>
+          <span class="pill pillGold">Futuro</span>
         </div>
-      </section>
+      </div>
 
-    </div>
+      <aside class="card">
+        <div class="asideQuote">
+          “En Rotary, el liderazgo no se declara: se demuestra. Y se demuestra cuando el servicio se convierte en resultados que permanecen.”
+        </div>
+        <div class="quoteSmall">Primer semestre 2025 · Club Rotary Huaraz Colonial · Áncash, Perú</div>
+
+        <div class="socialRow">
+          <a class="socialBtn" href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank" rel="noopener">Facebook</a>
+          <a class="socialBtn" href="https://www.tiktok.com/@club.rotary.huara?_r=1&_t=ZS-92Tii6WdCr3" target="_blank" rel="noopener">TikTok</a>
+          <a class="socialBtn" href="https://wa.me/51942899919?text=Hola%2C%20deseo%20contactar%20al%20Club%20Rotary%20Huaraz%20Colonial" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </aside>
+    </section>
+
+    <!-- PRESIDENTE -->
+    <section id="presidencia" class="block">
+      <span class="kicker">Presidencia 2025–2026</span>
+      <h2>Mensaje del Presidente: liderazgo que se traduce en acción</h2>
+      <h3>José Rafael Zeña Peche · Club Rotary Huaraz Colonial</h3>
+
+      <div class="presiWrap">
+        <div class="presiPhoto">
+          <img src="Presi.jpg" alt="Presidente José Rafael Zeña Peche" />
+        </div>
+
+        <div>
+          <p>
+            Querida comunidad de Huaraz, de Áncash y del Perú: el servicio rotario no es simbólico; es liderazgo en acción.
+            En este primer semestre hemos demostrado que cuando el propósito se organiza y se ejecuta, el impacto se vuelve real.
+          </p>
+
+          <p>
+            Hemos puesto a la niñez en el centro, hemos fortalecido la cohesión institucional y hemos impulsado formación técnica en energía solar
+            porque el futuro se construye formando capacidades, no solo anunciando intenciones.
+          </p>
+
+          <p>
+            Nuestra visión es servir con calidad, con ética y con continuidad: que cada actividad sea un paso coherente hacia proyectos sostenibles
+            que mejoren la vida de las familias y fortalezcan la esperanza en nuestras comunidades.
+          </p>
+
+          <div class="signature">
+            José Rafael Zeña Peche<br/>
+            Presidente 2025–2026 · Club Rotary Huaraz Colonial
+          </div>
+
+          <div class="metaRow" style="margin-top:14px;">
+            <span class="pill">Unidad</span>
+            <span class="pill">Trabajo en equipo</span>
+            <span class="pill pillGold">Impacto real</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISITA GOBERNADORA -->
+    <section id="visita-gobernadora" class="block">
+      <span class="kicker">Hito institucional</span>
+      <h2>Visita de Gobernadora Distrital 4465</h2>
+      <h3>Identidad, presencia, cohesión y rumbo institucional</h3>
+
+      <p>
+        La visita oficial de la Gobernadora Distrital fortaleció la unidad del club, consolidó compromisos
+        y ratificó que el servicio se sostiene en liderazgo compartido, coherencia y cercanía con el territorio.
+      </p>
+
+      <div class="metaRow">
+        <span class="pill">Territorio</span>
+        <span class="pill">Unidad</span>
+        <span class="pill pillGold">Reconocimiento</span>
+      </div>
+
+      <div class="gallery">
+        <figure data-full="VG1.jpg" data-cap="Visita Gobernadora — Identidad y presencia.">
+          <img src="VG1.jpg" alt="Visita Gobernadora 1" />
+          <figcaption>VG 1 · Identidad y presencia</figcaption>
+        </figure>
+        <figure data-full="VG2.jpg" data-cap="Visita Gobernadora — Reconocimiento.">
+          <img src="VG2.jpg" alt="Visita Gobernadora 2" />
+          <figcaption>VG 2 · Reconocimiento</figcaption>
+        </figure>
+        <figure data-full="VG3.jpg" data-cap="Visita Gobernadora — Momento institucional.">
+          <img src="VG3.jpg" alt="Visita Gobernadora 3" />
+          <figcaption>VG 3 · Momento institucional</figcaption>
+        </figure>
+        <figure data-full="VG4.jpg" data-cap="Visita Gobernadora — Gratitud.">
+          <img src="VG4.jpg" alt="Visita Gobernadora 4" />
+          <figcaption>VG 4 · Gratitud</figcaption>
+        </figure>
+        <figure data-full="VG5.jpg" data-cap="Visita Gobernadora — Cohesión.">
+          <img src="VG5.jpg" alt="Visita Gobernadora 5" />
+          <figcaption>VG 5 · Cohesión</figcaption>
+        </figure>
+        <figure data-full="VG6.jpg" data-cap="Visita Gobernadora — Liderazgo compartido.">
+          <img src="VG6.jpg" alt="Visita Gobernadora 6" />
+          <figcaption>VG 6 · Liderazgo compartido</figcaption>
+        </figure>
+        <figure data-full="VG7.jpg" data-cap="Visita Gobernadora — Unidad.">
+          <img src="VG7.jpg" alt="Visita Gobernadora 7" />
+          <figcaption>VG 7 · Unidad</figcaption>
+        </figure>
+        <figure data-full="VG8.jpg" data-cap="Visita Gobernadora — Encuentro rotario.">
+          <img src="VG8.jpg" alt="Visita Gobernadora 8" />
+          <figcaption>VG 8 · Encuentro rotario</figcaption>
+        </figure>
+        <figure data-full="VG9.jpg" data-cap="Visita Gobernadora — Planificación.">
+          <img src="VG9.jpg" alt="Visita Gobernadora 9" />
+          <figcaption>VG 9 · Planificación</figcaption>
+        </figure>
+        <figure data-full="VG10.jpg" data-cap="Visita Gobernadora — Equipo en acción.">
+          <img src="VG10.jpg" alt="Visita Gobernadora 10" />
+          <figcaption>VG 10 · Equipo en acción</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- TALENTO SOLAR -->
+    <section id="talento-solar" class="block">
+      <span class="kicker">Formación técnica</span>
+      <h2>Talento Solar: capacitación en sistemas fotovoltaicos</h2>
+      <h3>Comprender, ejecutar y multiplicar soluciones sostenibles</h3>
+
+      <p>
+        La transición energética se construye formando capacidades. Impulsamos una capacitación con enfoque práctico:
+        aprender haciendo, con estándares de seguridad y calidad.
+      </p>
+
+      <div class="metaRow">
+        <span class="pill">Aprender haciendo</span>
+        <span class="pill">Seguridad y calidad</span>
+        <span class="pill pillGold">Empleabilidad</span>
+      </div>
+
+      <div class="gallery">
+        <figure data-full="CC1.jpg" data-cap="Talento Solar — sesión formativa.">
+          <img src="CC1.jpg" alt="Talento Solar 1" />
+          <figcaption>CC 1</figcaption>
+        </figure>
+        <figure data-full="CC2.jpg" data-cap="Talento Solar — explicación técnica.">
+          <img src="CC2.jpg" alt="Talento Solar 2" />
+          <figcaption>CC 2</figcaption>
+        </figure>
+        <figure data-full="CC3.jpg" data-cap="Talento Solar — demostración práctica.">
+          <img src="CC3.jpg" alt="Talento Solar 3" />
+          <figcaption>CC 3</figcaption>
+        </figure>
+        <figure data-full="CC4.jpg" data-cap="Talento Solar — práctica en sitio.">
+          <img src="CC4.jpg" alt="Talento Solar 4" />
+          <figcaption>CC 4</figcaption>
+        </figure>
+        <figure data-full="CC5.jpg" data-cap="Talento Solar — interacción con estudiantes.">
+          <img src="CC5.jpg" alt="Talento Solar 5" />
+          <figcaption>CC 5</figcaption>
+        </figure>
+        <figure data-full="CC6.jpg" data-cap="Talento Solar — observación técnica.">
+          <img src="CC6.jpg" alt="Talento Solar 6" />
+          <figcaption>CC 6</figcaption>
+        </figure>
+        <figure data-full="CC7.jpg" data-cap="Talento Solar — cierre de jornada.">
+          <img src="CC7.jpg" alt="Talento Solar 7" />
+          <figcaption>CC 7</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- LABORATORIO SOLAR -->
+    <section id="laboratorio-solar" class="block">
+      <span class="kicker">Proyecto educativo</span>
+      <h2>Donación de Laboratorio Solar (sistema fotovoltaico on-grid)</h2>
+      <h3>Capacidad instalada para formar el futuro</h3>
+
+      <p>
+        Donación de un sistema fotovoltaico conectado a red (on-grid), valorizado en <strong>US$ 7,000</strong>, para fortalecer
+        la formación técnica práctica en energías renovables.
+      </p>
+
+      <div class="metaRow">
+        <span class="pill">Sistema on-grid</span>
+        <span class="pill pillGold">Valorizado: US$ 7,000</span>
+        <span class="pill">Formación práctica</span>
+      </div>
+
+      <div class="gallery">
+        <figure data-full="SFV_1.jpg" data-cap="Laboratorio solar — implementación.">
+          <img src="SFV_1.jpg" alt="SFV 1" />
+          <figcaption>SFV 1</figcaption>
+        </figure>
+        <figure data-full="SFV_2.jpg" data-cap="Laboratorio solar — acto institucional.">
+          <img src="SFV_2.jpg" alt="SFV 2" />
+          <figcaption>SFV 2</figcaption>
+        </figure>
+        <figure data-full="SFV_3.jpg" data-cap="Laboratorio solar — sesión informativa.">
+          <img src="SFV_3.jpg" alt="SFV 3" />
+          <figcaption>SFV 3</figcaption>
+        </figure>
+        <figure data-full="SFV_4.jpg" data-cap="Laboratorio solar — servicio con propósito.">
+          <img src="SFV_4.jpg" alt="SFV 4" />
+          <figcaption>SFV 4</figcaption>
+        </figure>
+        <figure data-full="SFV_5.jpg" data-cap="Laboratorio solar — documentación y soporte.">
+          <img src="SFV_5.jpg" alt="SFV 5" />
+          <figcaption>SFV 5</figcaption>
+        </figure>
+        <figure data-full="SFV_6.jpg" data-cap="Laboratorio solar — componentes.">
+          <img src="SFV_6.jpg" alt="SFV 6" />
+          <figcaption>SFV 6</figcaption>
+        </figure>
+        <figure data-full="SFV_7.jpg" data-cap="Laboratorio solar — enfoque práctico.">
+          <img src="SFV_7.jpg" alt="SFV 7" />
+          <figcaption>SFV 7</figcaption>
+        </figure>
+        <figure data-full="SFV_8.jpg" data-cap="Laboratorio solar — articulación institucional.">
+          <img src="SFV_8.jpg" alt="SFV 8" />
+          <figcaption>SFV 8</figcaption>
+        </figure>
+        <figure data-full="SFV_9.jpg" data-cap="Laboratorio solar — resultados.">
+          <img src="SFV_9.jpg" alt="SFV 9" />
+          <figcaption>SFV 9</figcaption>
+        </figure>
+        <figure data-full="SFV_10.jpg" data-cap="Laboratorio solar — comunidad educativa.">
+          <img src="SFV_10.jpg" alt="SFV 10" />
+          <figcaption>SFV 10</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- LUMINARIAS LLUPA -->
+    <section id="luminarias-llupa" class="block">
+      <span class="kicker">Energía limpia en territorio</span>
+      <h2>Donación de luminarias solares · Llupa</h2>
+      <h3>Iluminación del frontis de la Municipalidad del Centro Poblado de Llupa</h3>
+
+      <p>
+        Entrega de <strong>5 luminarias solares</strong> para fortalecer seguridad y mejorar el entorno urbano, reafirmando
+        el compromiso con soluciones sostenibles de impacto directo.
+      </p>
+
+      <div class="metaRow">
+        <span class="pill">Seguridad</span>
+        <span class="pill">Energía limpia</span>
+        <span class="pill pillGold">Impacto directo</span>
+      </div>
+
+      <div class="gallery">
+        <figure data-full="LS1.jpg" data-cap="Llupa — luminaria solar 1.">
+          <img src="LS1.jpg" alt="Llupa 1" />
+          <figcaption>LS 1</figcaption>
+        </figure>
+        <figure data-full="LS2.jpg" data-cap="Llupa — luminaria solar 2.">
+          <img src="LS2.jpg" alt="Llupa 2" />
+          <figcaption>LS 2</figcaption>
+        </figure>
+        <figure data-full="LS3.jpg" data-cap="Llupa — luminaria solar 3.">
+          <img src="LS3.jpg" alt="Llupa 3" />
+          <figcaption>LS 3</figcaption>
+        </figure>
+        <figure data-full="LS4.jpg" data-cap="Llupa — registro 4.">
+          <img src="LS4.jpg" alt="Llupa 4" />
+          <figcaption>LS 4</figcaption>
+        </figure>
+        <figure data-full="LS5.jpg" data-cap="Llupa — cierre 5.">
+          <img src="LS5.jpg" alt="Llupa 5" />
+          <figcaption>LS 5</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- NAVIDAD CARAZ -->
+    <section id="navidad-caraz" class="block">
+      <span class="kicker">Servicio social · Navidad</span>
+      <h2>Navidad en Caraz: CEI María Candelaria del Villar</h2>
+      <h3>Niñez en el centro · Alegría, cuidado y pertenencia</h3>
+
+      <p style="font-weight:900; color:var(--rotary-blue); margin-top:0;">
+        La magia de Rotary se hizo presente esta Navidad.
+      </p>
+
+      <p>
+        Con el corazón lleno de amor y servicio, el <strong>Club Rotary Huaraz Colonial</strong> llegó hasta el
+        <strong>CEI María Candelaria del Villar</strong>, en <strong>Caraz</strong>, para compartir una mañana inolvidable
+        junto a nuestros niños y niñas.
+      </p>
+
+      <p>
+        Risas, abrazos, regalos y miradas llenas de ilusión nos recordaron que la verdadera Navidad vive en los pequeños gestos,
+        en el tiempo compartido y en la alegría sincera de servir. Cada sonrisa fue un regalo para nosotros.
+      </p>
+
+      <p style="font-weight:900; color:var(--rotary-blue-2);">
+        Porque en Rotary, la Navidad es todo el año cuando servimos con el corazón.
+      </p>
+
+      <div class="gallery">
+        <figure data-full="NC1.jpg" data-cap="Caraz — CEI María Candelaria del Villar (1).">
+          <img src="NC1.jpg" alt="Caraz 1" />
+          <figcaption>NC 1</figcaption>
+        </figure>
+        <figure data-full="NC2.jpg" data-cap="Caraz — jornada navideña (2).">
+          <img src="NC2.jpg" alt="Caraz 2" />
+          <figcaption>NC 2</figcaption>
+        </figure>
+        <figure data-full="NC3.jpg" data-cap="Caraz — acompañamiento (3).">
+          <img src="NC3.jpg" alt="Caraz 3" />
+          <figcaption>NC 3</figcaption>
+        </figure>
+        <figure data-full="NC4.jpg" data-cap="Caraz — entrega solidaria (4).">
+          <img src="NC4.jpg" alt="Caraz 4" />
+          <figcaption>NC 4</figcaption>
+        </figure>
+        <figure data-full="NC5.jpg" data-cap="Caraz — ilusión y gratitud (5).">
+          <img src="NC5.jpg" alt="Caraz 5" />
+          <figcaption>NC 5</figcaption>
+        </figure>
+        <figure data-full="NC6.jpg" data-cap="Caraz — cierre con unidad (6).">
+          <img src="NC6.jpg" alt="Caraz 6" />
+          <figcaption>NC 6</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="block">
+      <span class="kicker">Contacto institucional</span>
+      <h2>Conversemos: alianzas, voluntariado y proyectos</h2>
+      <h3>Acceso con un clic a WhatsApp, Facebook y TikTok</h3>
+
+      <div class="contactGrid">
+        <div class="contactItem">
+          <strong>WhatsApp / Teléfono</strong>
+          <a href="tel:+51942899919">+51 942 899 919</a><br/>
+          <a href="https://wa.me/51942899919?text=Hola%2C%20deseo%20contactar%20al%20Club%20Rotary%20Huaraz%20Colonial" target="_blank" rel="noopener">
+            Abrir WhatsApp con mensaje
+          </a>
+        </div>
+
+        <div class="contactItem">
+          <strong>Correo institucional</strong>
+          <a href="mailto:rotary.club.huaraz.colonial@gmail.com">rotary.club.huaraz.colonial@gmail.com</a>
+        </div>
+
+        <div class="contactItem">
+          <strong>Dirección</strong>
+          Jr. Augusto B. Leguía 563
+        </div>
+
+        <div class="contactItem">
+          <strong>Redes oficiales</strong>
+          <div class="socialRow" style="margin-top:0;">
+            <a class="socialBtn" href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank" rel="noopener">Ir a Facebook</a>
+            <a class="socialBtn" href="https://www.tiktok.com/@club.rotary.huara?_r=1&_t=ZS-92Tii6WdCr3" target="_blank" rel="noopener">Ir a TikTok</a>
+            <a class="socialBtn" href="https://wa.me/51942899919" target="_blank" rel="noopener">Ir a WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footGrid">
@@ -1021,18 +887,17 @@
   </a>
 
   <!-- Modal para ampliar fotos -->
-  <div class="modal" id="modal">
-    <div class="modalBox">
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modalBox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
       <div class="modalTop">
         <div id="modalCap">Imagen</div>
-        <button class="closeBtn" id="closeModal">Cerrar</button>
+        <button class="closeBtn" id="closeModal" type="button">Cerrar</button>
       </div>
       <img class="modalImg" id="modalImg" src="" alt="Imagen ampliada" />
     </div>
   </div>
 
   <script>
-    // Modal de imágenes
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modalImg');
     const modalCap = document.getElementById('modalCap');
@@ -1045,20 +910,28 @@
         modalImg.src = src;
         modalCap.textContent = cap;
         modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
       });
     });
 
-    closeModal.addEventListener('click', () => modal.classList.remove('open'));
+    function closeIt(){
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      modalImg.src = '';
+    }
+
+    closeModal.addEventListener('click', closeIt);
     modal.addEventListener('click', (e) => {
-      if(e.target === modal) modal.classList.remove('open');
+      if(e.target === modal) closeIt();
     });
     document.addEventListener('keydown', (e) => {
-      if(e.key === 'Escape') modal.classList.remove('open');
+      if(e.key === 'Escape') closeIt();
     });
   </script>
-
 </body>
 </html>
+
+
 
 
 
