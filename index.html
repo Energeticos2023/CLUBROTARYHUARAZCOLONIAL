@@ -4,422 +4,521 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Club Rotary Huaraz Colonial</title>
-  <meta name="description" content="Club Rotary Huaraz Colonial: servicio, liderazgo y acción comunitaria. Proyectos solares, educación técnica y desarrollo sostenible en Áncash." />
+  <meta name="description" content="Club Rotary Huaraz Colonial: servicio, liderazgo y proyectos de impacto en Áncash. Educación técnica, energías limpias y acción comunitaria." />
 
   <style>
     :root{
       --rotary-blue:#17458f;
       --rotary-blue-2:#0f2f66;
       --rotary-gold:#f7a81b;
-
-      --bg:#f5f7fb;
-      --text:#101828;
+      --bg:#f5f7fa;
+      --text:#1b1f24;
       --muted:#5b6573;
       --card:#ffffff;
-
-      --shadow: 0 10px 30px rgba(16,24,40,.10);
-      --shadow2: 0 8px 18px rgba(16,24,40,.08);
+      --shadow: 0 10px 30px rgba(0,0,0,.10);
+      --shadow2: 0 18px 50px rgba(0,0,0,.14);
       --radius: 18px;
-      --maxw: 1180px;
+      --maxw: 1120px;
     }
 
-    *{ box-sizing:border-box; }
-    html{ scroll-behavior:smooth; }
+    *{ box-sizing: border-box; }
+    html{ scroll-behavior: smooth; }
+
     body{
       margin:0;
       font-family: "Segoe UI", system-ui, -apple-system, Arial, Helvetica, sans-serif;
-      color:var(--text);
-      background: radial-gradient(1200px 600px at 10% -10%, rgba(23,69,143,.14), transparent 60%),
-                  radial-gradient(1200px 600px at 90% 0%, rgba(247,168,27,.16), transparent 55%),
-                  var(--bg);
-      line-height:1.65;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
     }
 
-    a{ color:inherit; text-decoration:none; }
-    a:hover{ text-decoration:none; }
+    a{ color: var(--rotary-blue); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
 
-    /* Layout */
-    .container{ max-width:var(--maxw); margin:0 auto; padding:0 18px; }
-    .section{ padding:64px 0; }
-    .section h2{ margin:0 0 12px 0; color:var(--rotary-blue); font-size:28px; letter-spacing:.2px; }
-    .section p.lead{ margin:0 0 22px 0; color:var(--muted); font-size:16px; max-width: 900px; }
-    .kicker{
-      display:inline-flex;
-      gap:10px;
-      align-items:center;
-      padding:8px 12px;
-      border-radius:999px;
-      background: rgba(23,69,143,.10);
-      color: var(--rotary-blue);
-      font-weight: 800;
-      letter-spacing:.3px;
-      text-transform: uppercase;
-      font-size: 12px;
-      width: fit-content;
-    }
-    .dot{
-      width:8px; height:8px; border-radius:999px;
-      background: var(--rotary-gold);
-      display:inline-block;
+    .container{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 18px;
     }
 
-    /* Topbar */
+    /* TOP BAR */
     .topbar{
       position: sticky;
-      top:0;
-      z-index: 999;
+      top: 0;
+      z-index: 2000;
+      background: rgba(15,47,102,.88);
       backdrop-filter: blur(10px);
-      background: rgba(255,255,255,.70);
-      border-bottom: 1px solid rgba(16,24,40,.06);
+      border-bottom: 1px solid rgba(255,255,255,.12);
     }
+
     .topbar-inner{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:14px;
-      padding:12px 0;
+      gap: 16px;
+      padding: 12px 0;
     }
+
     .brand{
       display:flex;
       align-items:center;
-      gap:12px;
+      gap: 12px;
       min-width: 240px;
     }
+
     .brand img{
-      height:42px;
-      width:auto;
-      display:block;
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      padding: 6px;
     }
+
     .brand-title{
-      display:flex;
-      flex-direction:column;
-      line-height:1.1;
+      color:#fff;
+      line-height:1.2;
     }
     .brand-title strong{
-      font-size:14px;
-      letter-spacing:.2px;
+      display:block;
+      font-size: 14px;
+      letter-spacing: .2px;
     }
     .brand-title span{
-      font-size:12px;
-      color: var(--muted);
+      display:block;
+      font-size: 12px;
+      color: rgba(255,255,255,.82);
+      margin-top: 2px;
     }
 
     .nav{
       display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      justify-content:flex-end;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
+
     .nav a{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:9px 12px;
-      border-radius: 999px;
+      display:inline-block;
+      color:#fff;
       font-weight: 700;
       font-size: 13px;
-      color: var(--rotary-blue);
-      background: rgba(23,69,143,.08);
-      border: 1px solid rgba(23,69,143,.10);
-      transition: .2s ease;
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.12);
+      text-decoration:none;
+      white-space: nowrap;
+      transition: .18s ease;
     }
     .nav a:hover{
+      background: rgba(255,255,255,.16);
       transform: translateY(-1px);
-      background: rgba(23,69,143,.12);
     }
 
-    .social{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      justify-content:flex-end;
-      min-width: 140px;
-    }
-    .social a{
-      width:40px;
-      height:40px;
-      border-radius: 12px;
-      display:grid;
-      place-items:center;
-      background: rgba(16,24,40,.04);
-      border: 1px solid rgba(16,24,40,.06);
-      transition: .2s ease;
-    }
-    .social a:hover{ transform: translateY(-1px); background: rgba(16,24,40,.06); }
-    .social img{ width:20px; height:20px; object-fit:contain; display:block; }
-
-    /* Hero */
+    /* HERO */
     .hero{
-      padding: 44px 0 18px 0;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(1200px 700px at 10% 10%, rgba(247,168,27,.25), transparent 55%),
+        radial-gradient(1200px 700px at 80% 30%, rgba(23,69,143,.35), transparent 55%),
+        linear-gradient(135deg, var(--rotary-blue-2), var(--rotary-blue));
+      color: #fff;
+      padding: 46px 0 34px 0;
     }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-60px -60px auto -60px;
+      height: 220px;
+      background: rgba(255,255,255,.06);
+      transform: rotate(-3deg);
+      filter: blur(2px);
+      pointer-events:none;
+    }
+
     .hero-wrap{
-      border-radius: 26px;
-      overflow:hidden;
-      box-shadow: var(--shadow);
-      background: linear-gradient(110deg, rgba(23,69,143,1), rgba(15,47,102,1));
-      color:#fff;
-      position:relative;
+      display:block;
+      padding: 14px 0 6px 0;
     }
+
     .hero-inner{
       display:grid;
-      grid-template-columns: 1.05fr .95fr;
+      grid-template-columns: 1.15fr .85fr;
       gap: 18px;
-      padding: 30px;
-      align-items:center;
-      min-height: 320px;
+      align-items: stretch;
     }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      font-weight: 800;
+      letter-spacing: .35px;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: rgba(255,255,255,.92);
+    }
+
+    .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--rotary-gold);
+      box-shadow: 0 0 0 4px rgba(247,168,27,.20);
+    }
+
     .hero h1{
       margin: 10px 0 10px 0;
-      font-size: 36px;
+      font-size: 34px;
+      line-height: 1.12;
       letter-spacing: .2px;
-      line-height: 1.15;
     }
+
     .hero p{
-      margin: 0 0 18px 0;
-      color: rgba(255,255,255,.88);
-      max-width: 720px;
-      font-size: 16px;
+      margin: 0 0 14px 0;
+      color: rgba(255,255,255,.86);
+      font-size: 15px;
+      max-width: 740px;
     }
+
+    .cta{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      font-weight: 800;
+      font-size: 14px;
+      border: 1px solid transparent;
+      text-decoration:none !important;
+      transition: .18s ease;
+      cursor: pointer;
+    }
+
+    .btn.primary{
+      background: var(--rotary-gold);
+      color: #1b1f24;
+      box-shadow: 0 10px 28px rgba(0,0,0,.18);
+    }
+    .btn.primary:hover{ transform: translateY(-1px); filter: brightness(.98); }
+
+    .btn.ghost{
+      background: rgba(255,255,255,.10);
+      color:#fff;
+      border-color: rgba(255,255,255,.18);
+    }
+    .btn.ghost:hover{ transform: translateY(-1px); background: rgba(255,255,255,.16); }
+
     .hero-badges{
       display:flex;
-      flex-wrap:wrap;
-      gap:10px;
+      gap: 10px;
+      flex-wrap: wrap;
       margin-top: 14px;
     }
     .badge{
       display:inline-flex;
       align-items:center;
-      gap:8px;
-      padding: 10px 12px;
+      gap: 8px;
+      padding: 9px 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,.12);
-      border: 1px solid rgba(255,255,255,.18);
-      font-weight: 700;
-      font-size: 13px;
-    }
-    .cta{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top: 18px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding: 12px 16px;
-      border-radius: 14px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.14);
       font-weight: 800;
-      font-size: 14px;
-      cursor:pointer;
-      border: 1px solid rgba(255,255,255,.18);
-      transition: .2s ease;
+      font-size: 12px;
+      color: rgba(255,255,255,.90);
     }
-    .btn.primary{
-      background: var(--rotary-gold);
-      color:#1a1200;
-      border-color: rgba(0,0,0,.08);
-    }
-    .btn.primary:hover{ transform: translateY(-1px); filter: brightness(1.02); }
-    .btn.ghost{
-      background: rgba(255,255,255,.12);
-      color:#fff;
-    }
-    .btn.ghost:hover{ transform: translateY(-1px); background: rgba(255,255,255,.16); }
 
-    .hero-card{
+    /* PRESIDENTE */
+    .president-card{
       background: rgba(255,255,255,.10);
       border: 1px solid rgba(255,255,255,.18);
       border-radius: 22px;
       padding: 18px;
       box-shadow: 0 10px 30px rgba(0,0,0,.18);
+      color: #fff;
     }
-    .hero-card strong{ display:block; font-size: 14px; letter-spacing:.2px; }
-    .hero-card span{ display:block; font-size: 13px; color: rgba(255,255,255,.82); margin-top: 6px; }
-    .hero-quote{
+    .president-head{
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+    .president-photo{
+      width: 104px;
+      height: 104px;
+      border-radius: 22px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.08);
+      flex: 0 0 auto;
+    }
+    .president-meta{ line-height:1.15; }
+    .president-name{
+      display:block;
+      font-size: 15px;
+      letter-spacing:.2px;
+    }
+    .president-role{
+      display:block;
+      font-size: 13px;
+      color: rgba(255,255,255,.88);
+      margin-top: 6px;
+    }
+    .president-motto{
+      display:inline-block;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing:.3px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      color: rgba(255,255,255,.92);
+      width: fit-content;
+    }
+    .president-message{
       margin-top: 14px;
       padding-top: 12px;
       border-top: 1px solid rgba(255,255,255,.16);
+    }
+    .president-message h3{
+      margin: 0 0 10px 0;
+      font-size: 16px;
+      color: #fff;
+      letter-spacing:.2px;
+    }
+    .president-message p{
+      margin: 0 0 10px 0;
       color: rgba(255,255,255,.88);
-      font-style: italic;
       font-size: 14px;
       line-height: 1.55;
     }
+    .president-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top: 10px;
+    }
 
-    /* Cards / Grids */
-    .grid-2{ display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .grid-3{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    /* SECCIONES */
+    main{ padding: 22px 0 56px 0; }
+
+    section{
+      padding: 18px 0;
+    }
+
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
     .card{
       background: var(--card);
       border-radius: var(--radius);
-      box-shadow: var(--shadow2);
-      border: 1px solid rgba(16,24,40,.06);
+      box-shadow: var(--shadow);
       padding: 22px;
+      border: 1px solid rgba(0,0,0,.06);
+    }
+
+    .card h2{
+      margin: 0 0 8px 0;
+      color: var(--rotary-blue);
+      font-size: 22px;
+      letter-spacing: .2px;
     }
     .card h3{
-      margin: 10px 0 10px 0;
-      color: var(--text);
-      font-size: 18px;
+      margin: 0 0 12px 0;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 14px;
     }
-    .card p{ margin: 0; color: var(--muted); }
 
-    .feature{
-      display:flex;
-      gap:12px;
-      align-items:flex-start;
+    .lead{
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
     }
-    .icon{
-      width:40px; height:40px;
-      border-radius: 14px;
-      background: rgba(23,69,143,.10);
-      border: 1px solid rgba(23,69,143,.14);
-      display:grid;
-      place-items:center;
+
+    .pillrow{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(23,69,143,.08);
       color: var(--rotary-blue);
       font-weight: 900;
-      flex: 0 0 auto;
+      font-size: 12px;
+    }
+    .pill.gold{
+      background: rgba(247,168,27,.16);
+      color: #7a4b00;
     }
 
-    /* Timeline */
-    .timeline{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-      margin-top: 14px;
+    .highlight{
+      border-left: 6px solid var(--rotary-blue);
+      padding: 12px 14px;
+      margin: 14px 0;
+      background: rgba(23,69,143,.06);
+      border-radius: 12px;
+      font-weight: 700;
+      color: #263043;
     }
-    .titem{
-      display:flex;
-      gap: 12px;
-      align-items:flex-start;
-      padding: 14px 14px;
-      border-radius: 16px;
-      background: rgba(16,24,40,.02);
-      border: 1px solid rgba(16,24,40,.06);
-    }
-    .titem .mark{
-      width:12px; height:12px;
-      border-radius: 999px;
-      background: var(--rotary-gold);
-      margin-top: 6px;
-      flex: 0 0 auto;
-    }
-    .titem strong{ display:block; font-size: 14px; }
-    .titem span{ display:block; color: var(--muted); font-size: 13px; margin-top: 2px; }
 
-    /* Gallery */
+    ul{ margin: 10px 0 0 18px; color: var(--muted); }
+    li{ margin: 7px 0; }
+
+    /* GALERÍAS */
     .gallery{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 14px;
-      margin-top: 18px;
+      margin-top: 14px;
     }
+
     figure{
       margin:0;
-      background:#fff;
-      border-radius: 18px;
+      background: #fff;
+      border-radius: 16px;
       overflow:hidden;
-      box-shadow: var(--shadow2);
-      border: 1px solid rgba(16,24,40,.06);
+      box-shadow: 0 8px 22px rgba(0,0,0,.08);
+      border: 1px solid rgba(0,0,0,.05);
     }
+
     figure img{
-      width:100%;
-      height:220px;
-      object-fit:cover;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
       display:block;
       transition: transform .25s ease;
     }
+
     figure:hover img{ transform: scale(1.04); }
+
     figcaption{
       padding: 10px 12px;
       font-size: 13px;
       color: var(--muted);
-      border-top: 1px solid rgba(16,24,40,.06);
+      border-top: 1px solid rgba(0,0,0,.06);
     }
 
-    /* Contact */
+    /* BLOQUE REDES */
+    .socialbar{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap: 14px;
+      padding: 14px 0 0 0;
+      flex-wrap: wrap;
+    }
+
+    .social{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.14);
+      color: #fff;
+      text-decoration:none !important;
+      font-weight: 900;
+      font-size: 13px;
+      transition: .18s ease;
+    }
+    .social:hover{ transform: translateY(-1px); background: rgba(255,255,255,.16); }
+    .social img{ width: 18px; height: 18px; object-fit: contain; }
+
+    /* CONTACTO */
     form{
       display:grid;
       gap: 10px;
-      margin-top: 12px;
+      max-width: 620px;
     }
     input, textarea{
-      width:100%;
+      width: 100%;
       padding: 12px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(16,24,40,.12);
-      outline:none;
-      background:#fff;
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,.14);
       font-family: inherit;
       font-size: 14px;
+      outline: none;
+      background: #fff;
     }
-    textarea{ min-height: 110px; resize: vertical; }
-    .form-row{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .submit{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding: 12px 16px;
-      border-radius: 14px;
-      font-weight: 900;
-      border: 1px solid rgba(16,24,40,.10);
-      background: var(--rotary-blue);
-      color:#fff;
-      cursor:pointer;
-      transition: .2s ease;
-      width: fit-content;
-    }
-    .submit:hover{ transform: translateY(-1px); filter: brightness(1.02); }
+    textarea{ min-height: 120px; resize: vertical; }
 
-    /* Footer */
-    footer{
-      padding: 34px 0 52px 0;
+    .small{
+      font-size: 12px;
       color: var(--muted);
-      font-size: 13px;
-      text-align:center;
-      border-top: 1px solid rgba(16,24,40,.08);
-      background: rgba(255,255,255,.55);
-      backdrop-filter: blur(10px);
+      margin-top: 8px;
     }
 
-    /* WhatsApp */
+    /* WHATSAPP FLOAT */
     .whatsapp-float{
       position: fixed;
       width: 58px;
       height: 58px;
       bottom: 18px;
       right: 18px;
-      z-index: 1200;
+      z-index: 3000;
+      display:flex;
+      align-items:center;
+      justify-content:center;
       border-radius: 18px;
-      box-shadow: 0 12px 26px rgba(0,0,0,.18);
-      overflow:hidden;
-      border: 1px solid rgba(16,24,40,.10);
-      background:#fff;
-      display:grid;
-      place-items:center;
-      transition: .2s ease;
+      background: #25D366;
+      box-shadow: var(--shadow2);
+      border: 1px solid rgba(0,0,0,.06);
+      transition: .18s ease;
     }
     .whatsapp-float:hover{ transform: translateY(-2px); }
-    .whatsapp-float img{ width: 34px; height: 34px; display:block; }
+    .whatsapp-float img{ width: 30px; height: 30px; }
 
-    /* Responsive */
+    /* FOOTER */
+    footer{
+      background: linear-gradient(90deg, var(--rotary-blue-2), var(--rotary-blue));
+      color: rgba(255,255,255,.92);
+      padding: 24px 0;
+      margin-top: 26px;
+    }
+    .footer-inner{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+    }
+    .footer-inner p{ margin: 0; font-size: 13px; }
+
+    /* RESPONSIVE */
     @media (max-width: 980px){
       .hero-inner{ grid-template-columns: 1fr; }
-      .grid-3{ grid-template-columns: 1fr; }
-      .grid-2{ grid-template-columns: 1fr; }
-      .brand{ min-width: unset; }
-      .social{ min-width: unset; }
+      .brand{ min-width: auto; }
+      .nav{ justify-content: flex-start; }
+      .grid2{ grid-template-columns: 1fr; }
     }
     @media (max-width: 640px){
       .hero h1{ font-size: 28px; }
-      .form-row{ grid-template-columns: 1fr; }
-      .nav a{ padding: 8px 10px; font-size: 12px; }
-      .brand-title span{ display:none; }
+      .brand img{ width: 46px; height: 46px; }
+      .president-photo{ width: 92px; height: 92px; border-radius: 18px; }
+      figure img{ height: 200px; }
     }
   </style>
 </head>
@@ -430,46 +529,39 @@
   <div class="topbar">
     <div class="container">
       <div class="topbar-inner">
-        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <div class="brand">
           <img src="Logo.png" alt="Logo Club Rotary Huaraz Colonial" />
           <div class="brand-title">
             <strong>Club Rotary Huaraz Colonial</strong>
             <span>“Dar de sí antes de pensar en sí” · Unidos para hacer el bien</span>
           </div>
-        </a>
-
-        <nav class="nav" aria-label="Navegación principal">
-          <a href="#nosotros"><span class="dot"></span>Nosotros</a>
-          <a href="#hitos"><span class="dot"></span>Hitos</a>
-          <a href="#proyectos"><span class="dot"></span>Proyectos</a>
-          <a href="#galerias"><span class="dot"></span>Galerías</a>
-          <a href="#unete"><span class="dot"></span>Únete</a>
-          <a href="#contacto"><span class="dot"></span>Contacto</a>
-        </nav>
-
-        <div class="social" aria-label="Redes sociales">
-          <a href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank" rel="noopener">
-            <img src="facebook.png" alt="Facebook" />
-          </a>
-          <a href="https://www.tiktok.com/@club.rotary.huara" target="_blank" rel="noopener">
-            <img src="tiktok.png" alt="TikTok" />
-          </a>
         </div>
+
+        <nav class="nav">
+          <a href="#inicio">Inicio</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#hitos">Últimos hitos</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#galerias">Galerías</a>
+          <a href="#unete">Únete</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
       </div>
     </div>
   </div>
 
   <!-- HERO -->
-  <div id="inicio" class="hero">
+  <header id="inicio" class="hero">
     <div class="container">
       <div class="hero-wrap">
         <div class="hero-inner">
+
           <div>
             <div class="kicker"><span class="dot"></span>Servicio · Liderazgo · Impacto</div>
             <h1>Formamos capacidades. Ejecutamos proyectos. Transformamos comunidades en Áncash.</h1>
             <p>
-              Somos un club rotario joven, con visión técnica y vocación de servicio: impulsamos educación práctica,
-              energías limpias y acciones comunitarias con resultados visibles y sostenibles.
+              Somos un club rotario joven con visión técnica y vocación de servicio. Impulsamos educación práctica,
+              energías limpias y acción comunitaria con resultados visibles y sostenibles.
             </p>
 
             <div class="cta">
@@ -484,379 +576,376 @@
               <div class="badge"><span class="dot"></span>Energía solar para el bien</div>
               <div class="badge"><span class="dot"></span>Trabajo en alianzas</div>
             </div>
-          </div>
 
-          <div class="hero-card">
-            <strong>Presidencia 2025–2026</strong>
-            <span>José Rafael Zeña Peche</span>
-            <div class="hero-quote">
-              “Dar de sí antes de pensar en sí. Nuestro compromiso es convertir la solidaridad en proyectos ejecutados y medibles.”
+            <div class="socialbar" style="margin-top:14px;">
+              <a class="social" href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank" rel="noopener">
+                <img src="facebook.png" alt="Facebook" /> Facebook
+              </a>
+              <a class="social" href="https://www.tiktok.com/@club.rotary.huara" target="_blank" rel="noopener">
+                <img src="tiktok.png" alt="TikTok" /> TikTok
+              </a>
             </div>
           </div>
+
+          <!-- PRESIDENTE (FOTO + MENSAJE CLAVE) -->
+          <div class="president-card">
+            <div class="president-head">
+              <img class="president-photo" src="Presi.jpg" alt="Presidente del Club Rotary Huaraz Colonial" />
+              <div class="president-meta">
+                <strong class="president-name">José Rafael Zeña Peche</strong>
+                <span class="president-role">Presidente 2025–2026 · Club Rotary Huaraz Colonial</span>
+                <span class="president-motto">Unidos para hacer el bien</span>
+              </div>
+            </div>
+
+            <div class="president-message">
+              <h3>Mensaje del Presidente</h3>
+              <p><strong>¡Querida comunidad de Huaraz, Áncash y del Perú!</strong></p>
+              <p>En Rotary servimos con propósito. Somos líderes, soñadores y hacedores. Desde nuestro club sembramos esperanza con acciones concretas.</p>
+              <p>Los invito a ser parte de esta gran familia que transforma realidades y enciende corazones.</p>
+              <p><strong>“Dar de sí antes de pensar en sí”</strong></p>
+            </div>
+
+            <div class="president-actions">
+              <a class="btn primary" href="#unete">Quiero ser parte del Club</a>
+              <a class="btn ghost" href="#galerias">Ver evidencias</a>
+            </div>
+
+            <p class="small" style="color: rgba(255,255,255,.82);">
+              Importante: asegúrate de tener el archivo <strong>Presi.jpg</strong> en la misma carpeta que este HTML.
+            </p>
+          </div>
+
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
-  <!-- NOSOTROS -->
-  <section id="nosotros" class="section">
+  <main>
     <div class="container">
-      <div class="kicker"><span class="dot"></span>¿Quiénes somos?</div>
-      <h2>Un club con identidad local y proyección global</h2>
-      <p class="lead">
-        El Club Rotary Huaraz Colonial nació en abril de 2025 con el compromiso de servir a nuestra comunidad con ética,
-        solidaridad y acción concreta. Somos parte de Rotary, una red mundial que construye paz, desarrollo y esperanza.
-      </p>
 
-      <div class="grid-3">
-        <div class="card feature">
-          <div class="icon">R</div>
-          <div>
-            <h3>Servicio con propósito</h3>
-            <p>Priorizamos intervenciones con impacto directo: educación, energía limpia, seguridad y bienestar comunitario.</p>
-          </div>
-        </div>
-        <div class="card feature">
-          <div class="icon">⚡</div>
-          <div>
-            <h3>Enfoque técnico</h3>
-            <p>Promovemos soluciones sostenibles con criterio profesional: diseño, implementación, operación y mantenimiento.</p>
-          </div>
-        </div>
-        <div class="card feature">
-          <div class="icon">🤝</div>
-          <div>
-            <h3>Alianzas que multiplican</h3>
-            <p>Trabajamos con instituciones educativas, autoridades locales y aliados para escalar resultados.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HITOS (aquí se inserta lo último: Capacitación + Visita Gobernadora) -->
-  <section id="hitos" class="section">
-    <div class="container">
-      <div class="kicker"><span class="dot"></span>Últimos hitos</div>
-      <h2>Cuando el conocimiento se convierte en acción</h2>
-      <p class="lead">
-        La transición energética se construye formando personas capaces de diseñar, instalar, operar y mantener soluciones reales.
-        Este semestre consolidamos una ruta: <strong>formación + equipamiento + continuidad</strong>.
-      </p>
-
-      <div class="grid-2">
-        <!-- Hito 1: Capacitación FV -->
-        <div class="card">
-          <div class="kicker"><span class="dot"></span>Capacitación</div>
-          <h3>Formar talento solar para transformar comunidades</h3>
-          <p>
-            En el marco del convenio con el IESTP “Eleazar Guzmán Barrón”, impulsamos una capacitación en sistemas fotovoltaicos
-            con metodología “aprender haciendo”: primero comprender, luego ejecutar.
-          </p>
-
-          <div class="timeline">
-            <div class="titem">
-              <div class="mark"></div>
-              <div>
-                <strong>Fundamentos y contexto</strong>
-                <span>Energías renovables, energía solar y criterios esenciales de seguridad.</span>
-              </div>
-            </div>
-            <div class="titem">
-              <div class="mark"></div>
-              <div>
-                <strong>Componentes y nociones de diseño</strong>
-                <span>Arquitectura del sistema, criterios básicos y buenas prácticas.</span>
-              </div>
-            </div>
-            <div class="titem">
-              <div class="mark"></div>
-              <div>
-                <strong>Práctica en campo</strong>
-                <span>Observación y explicación en sitio: estructura, orientación, operación y aspectos clave.</span>
-              </div>
+      <!-- NOSOTROS -->
+      <section id="nosotros">
+        <div class="grid2">
+          <div class="card">
+            <h2>¿Quiénes somos?</h2>
+            <h3>Un club joven con visión técnica y vocación de servicio</h3>
+            <p class="lead">
+              El Club Rotary Huaraz Colonial nació en abril de 2025 con el compromiso de servir a nuestra comunidad con ética,
+              solidaridad y acción concreta. Somos parte de una red global de rotarios que construye paz, desarrollo y esperanza.
+            </p>
+            <div class="pillrow">
+              <span class="pill">Ética y liderazgo</span>
+              <span class="pill">Acción comunitaria</span>
+              <span class="pill gold">Impacto sostenible</span>
             </div>
           </div>
 
-          <p style="margin-top:14px;">
-            Esta experiencia fortalece la empleabilidad, eleva estándares de instalación/mantenimiento y promueve soluciones sostenibles.
-          </p>
-        </div>
-
-        <!-- Hito 2: Visita Gobernadora -->
-        <div class="card">
-          <div class="kicker"><span class="dot"></span>Visita institucional</div>
-          <h3>Una visita que fortalece la unidad y el servicio rotario</h3>
-          <p>
-            En agosto de 2025 recibimos la visita oficial de la Gobernadora Distrital 4465, <strong>Carmen A. Irribarren Chávez</strong>.
-            Su presencia fortaleció el rumbo institucional, renovó compromisos y reafirmó el valor de la unidad cuando el servicio se ejecuta con propósito.
-          </p>
-
-          <div class="timeline">
-            <div class="titem">
-              <div class="mark"></div>
-              <div>
-                <strong>Encuentro rotario en la Quebrada de Quilkayhuanca</strong>
-                <span>Identidad, cohesión y diálogo fraterno para alinear visión y prioridades.</span>
-              </div>
-            </div>
-            <div class="titem">
-              <div class="mark"></div>
-              <div>
-                <strong>Inauguración de luminarias solares en Llupa</strong>
-                <span>Servicio visible: seguridad y espacios mejor iluminados con energía del sol.</span>
-              </div>
-            </div>
-            <div class="titem">
-              <div class="mark"></div>
-              <div>
-                <strong>Cena institucional y reconocimiento</strong>
-                <span>Gratitud y pertenencia: reconocimiento especial a la Gobernadora por su liderazgo y acompañamiento.</span>
-              </div>
+          <div class="card">
+            <h2>Conexión global</h2>
+            <h3>Personas, ideas y soluciones para un mundo mejor</h3>
+            <p class="lead">
+              Somos parte de una red internacional rotaria. Conectamos aliados, voluntades y capacidades para ejecutar proyectos
+              que mejoran vidas con enfoque territorial y continuidad.
+            </p>
+            <div class="highlight">
+              Rotary es servicio con método: planificamos, ejecutamos, documentamos y multiplicamos resultados.
             </div>
           </div>
+        </div>
+      </section>
 
-          <p style="margin-top:14px;">
-            Reconocimiento Especial a: <strong>Carmen A. Irribarren Chávez</strong> — Gobernadora Distrital 4465 (Periodo 2025–2026),
-            por su liderazgo y compromiso con los valores y el servicio rotario.
+      <!-- ÚLTIMOS HITOS -->
+      <section id="hitos">
+        <div class="card">
+          <h2>Últimos hitos institucionales</h2>
+          <h3>Acciones recientes que consolidan nuestro rumbo y nuestra identidad</h3>
+
+          <!-- 1) CAPACITACIÓN (LO ÚLTIMO) -->
+          <div class="highlight" style="margin-top:10px;">
+            CUANDO EL CONOCIMIENTO SE CONVIERTE EN ACCIÓN: formar talento solar para transformar comunidades
+          </div>
+
+          <p class="lead">
+            <strong>Capacitación en sistemas fotovoltaicos</strong> con enfoque práctico dirigida a la comunidad estudiantil del
+            IESTP “Eleazar Guzmán Barrón”. La transición energética se construye formando personas capaces de diseñar, instalar,
+            operar y mantener soluciones reales.
+          </p>
+
+          <ul>
+            <li>Exposición introductoria sobre energías renovables y fundamentos de energía solar.</li>
+            <li>Conceptos clave: componentes FV, criterios básicos de diseño y nociones esenciales de seguridad.</li>
+            <li>Práctica guiada frente a paneles: montaje, orientación, operación y lecciones de campo.</li>
+            <li>Formación con propósito: empleabilidad, calidad de instalación, seguridad y sostenibilidad.</li>
+          </ul>
+
+          <div class="pillrow">
+            <span class="pill">Aprender haciendo</span>
+            <span class="pill">Enfoque práctico</span>
+            <span class="pill gold">Talento solar</span>
+          </div>
+
+          <!-- Galería Capacitación (CC 1..7) -->
+          <div class="gallery" style="margin-top:14px;">
+            <figure>
+              <img src="CC 1.jpeg" alt="Capacitación fotovoltaica - sesión y participación" />
+              <figcaption>Sesión formativa y participación activa.</figcaption>
+            </figure>
+            <figure>
+              <img src="CC 2.jpeg" alt="Capacitación fotovoltaica - exposición" />
+              <figcaption>Exposición técnica y fundamentos de energía solar.</figcaption>
+            </figure>
+            <figure>
+              <img src="CC 3.jpeg" alt="Capacitación fotovoltaica - explicación de componentes" />
+              <figcaption>Componentes y criterios básicos de seguridad.</figcaption>
+            </figure>
+            <figure>
+              <img src="CC 4.jpeg" alt="Capacitación fotovoltaica - práctica con paneles" />
+              <figcaption>Práctica guiada frente a una instalación real.</figcaption>
+            </figure>
+            <figure>
+              <img src="CC 5.jpeg" alt="Capacitación fotovoltaica - estudiantes en campo" />
+              <figcaption>Aprendizaje en campo: observación y análisis.</figcaption>
+            </figure>
+            <figure>
+              <img src="CC 6.jpeg" alt="Capacitación fotovoltaica - sesión con estudiantes" />
+              <figcaption>Interacción constante: conocimiento aplicado.</figcaption>
+            </figure>
+            <figure>
+              <img src="CC 7.jpeg" alt="Capacitación fotovoltaica - cierre de actividad" />
+              <figcaption>Cierre y consolidación del aprendizaje.</figcaption>
+            </figure>
+          </div>
+
+          <hr style="border:none;border-top:1px solid rgba(0,0,0,.08); margin:18px 0;">
+
+          <!-- 2) VISITA GOBERNADORA (VG 1..10) -->
+          <div class="highlight">
+            CUANDO EL LIDERAZGO SE HACE PRESENTE: una visita que fortalece la unidad y el servicio rotario
+          </div>
+
+          <p class="lead">
+            En agosto de 2025, el Club Rotary Huaraz Colonial vivió un hito institucional con la visita oficial de nuestra
+            Gobernadora Distrital 4465, <strong>Carmen A. Irribarren Chávez</strong>. Su presencia fortaleció el rumbo institucional,
+            renovó compromisos y reafirmó el valor de la unidad rotaria cuando el servicio se ejecuta con propósito.
+          </p>
+
+          <ul>
+            <li><strong>Encuentro rotario</strong> en la Quebrada de Quilkayhuanca: identidad, integración y visión compartida.</li>
+            <li><strong>Inauguración</strong> de luminarias solares en Llupa: servicio tangible que mejora la vida cotidiana.</li>
+            <li><strong>Cena institucional</strong> y Reconocimiento Especial: gratitud, pertenencia y cultura rotaria.</li>
+          </ul>
+
+          <div class="pillrow">
+            <span class="pill">Unidad rotaria</span>
+            <span class="pill">Territorio e identidad</span>
+            <span class="pill gold">Servicio visible</span>
+          </div>
+
+          <!-- Galería Visita Gobernadora (VG 1..10) -->
+          <div class="gallery" style="margin-top:14px;">
+            <figure><img src="VG 1.jpeg" alt="Visita Gobernadora - actividad" /><figcaption>Jornada institucional y presencia de liderazgo.</figcaption></figure>
+            <figure><img src="VG 2.jpeg" alt="Visita Gobernadora - integración" /><figcaption>Integración y cohesión del equipo.</figcaption></figure>
+            <figure><img src="VG 3.jpeg" alt="Visita Gobernadora - reconocimiento" /><figcaption>Reconocimiento y cultura rotaria.</figcaption></figure>
+            <figure><img src="VG 4.jpeg" alt="Visita Gobernadora - reunión" /><figcaption>Espacios de coordinación y visión compartida.</figcaption></figure>
+            <figure><img src="VG 5.jpeg" alt="Visita Gobernadora - territorio" /><figcaption>Territorio e identidad: Rotary presente.</figcaption></figure>
+            <figure><img src="VG 6.jpeg" alt="Visita Gobernadora - equipo" /><figcaption>Fortalecimiento de vínculos y pertenencia.</figcaption></figure>
+            <figure><img src="VG 7.jpeg" alt="Visita Gobernadora - ceremonia" /><figcaption>Actos institucionales con sentido.</figcaption></figure>
+            <figure><img src="VG 8.jpeg" alt="Visita Gobernadora - grupo" /><figcaption>Fraternidad y cohesión del club.</figcaption></figure>
+            <figure><img src="VG 9.jpeg" alt="Visita Gobernadora - reunión de trabajo" /><figcaption>Trabajo en equipo y planificación.</figcaption></figure>
+            <figure><img src="VG 10.jpeg" alt="Visita Gobernadora - cierre" /><figcaption>Cierre de jornada y proyección de nuevos desafíos.</figcaption></figure>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROYECTOS -->
+      <section id="proyectos">
+        <div class="card">
+          <h2>Proyectos transformadores</h2>
+          <h3>Soluciones concretas para mejorar calidad de vida</h3>
+          <ul>
+            <li>☀️ Termas solares para mejorar la calidad de vida en zonas altoandinas.</li>
+            <li>⚡ Energía fotovoltaica en escuelas y centros de salud rurales.</li>
+            <li>💧 Campañas de agua segura, salud preventiva y alfabetización.</li>
+          </ul>
+        </div>
+
+        <!-- DONACIÓN LABORATORIO SOLAR -->
+        <div class="card" style="margin-top:16px;">
+          <div class="pillrow">
+            <span class="pill">Proyecto Educativo</span>
+            <span class="pill gold">Laboratorio solar</span>
+          </div>
+          <h2 style="margin-top:10px;">Cuando el servicio se convierte en energía</h2>
+          <h3>Un laboratorio solar que forma el futuro de Áncash</h3>
+
+          <p class="lead">
+            El <strong>Club Rotary Huaraz Colonial</strong> realizó la donación de un
+            <strong>sistema fotovoltaico conectado a red (on-grid)</strong>, valorizado en
+            <strong>US$ 7,000</strong>, al <strong>IESTP “Eleazar Guzmán Barrón”</strong>,
+            para fortalecer la formación técnica práctica en energías renovables.
+          </p>
+
+          <p class="highlight">
+            Esta donación es una decisión de futuro: convierte la educación en experiencia real, elevando el nivel técnico con una plataforma “aprender haciendo”.
+          </p>
+
+          <h3>¿Qué habilita este laboratorio solar?</h3>
+          <ul>
+            <li><strong>Arquitectura y componentes</strong> del sistema FV.</li>
+            <li><strong>Buenas prácticas de instalación</strong> y ordenamiento.</li>
+            <li><strong>Seguridad y verificación</strong> para puesta en operación.</li>
+            <li><strong>Medición y monitoreo básico</strong> para mantenimiento.</li>
+            <li><strong>Análisis de casos reales</strong> con criterios de eficiencia.</li>
+          </ul>
+        </div>
+
+        <!-- DONACIÓN LUMINARIAS -->
+        <div class="card" style="margin-top:16px;">
+          <div class="pillrow">
+            <span class="pill">Proyecto Comunitario</span>
+            <span class="pill gold">Llupa</span>
+          </div>
+          <h2 style="margin-top:10px;">Donación de Luminarias Solares</h2>
+          <p class="lead">
+            Se hizo entrega de <strong>5 luminarias solares</strong> para la iluminación del frontis de la Municipalidad del
+            Centro Poblado de Llupa, fortaleciendo seguridad ciudadana y promoviendo energías limpias.
+          </p>
+
+          <div class="gallery" style="margin-top:14px;">
+            <figure><img src="LS1.jpg" alt="Luminarias solares - entrega 1"><figcaption>Entrega e instalación: impacto visible.</figcaption></figure>
+            <figure><img src="LS2.jpg" alt="Luminarias solares - entrega 2"><figcaption>Proyecto sostenible para seguridad.</figcaption></figure>
+            <figure><img src="LS3.jpg" alt="Luminarias solares - entrega 3"><figcaption>Trabajo articulado con autoridades locales.</figcaption></figure>
+            <figure><img src="LS4.jpg" alt="Luminarias solares - evidencia 4"><figcaption>Registro de la actividad y participación.</figcaption></figure>
+            <figure><img src="LS5.jpg" alt="Luminarias solares - evidencia 5"><figcaption>Servicio que permanece en el territorio.</figcaption></figure>
+          </div>
+        </div>
+
+        <!-- CONVENIO EDUCATIVO -->
+        <div class="card" style="margin-top:16px;">
+          <div class="pillrow">
+            <span class="pill">Alianza Estratégica</span>
+            <span class="pill gold">Agosto 2025</span>
+          </div>
+
+          <h2 style="margin-top:10px;">Cuando la educación se convierte en futuro</h2>
+          <h3>Convenio Rotary Huaraz Colonial + IESTP “Eleazar Guzmán Barrón”</h3>
+
+          <p class="lead">
+            En <strong>agosto de 2025</strong>, el Club Rotary Huaraz Colonial firmó un <strong>Convenio de Cooperación</strong>
+            con el IESTP “Eleazar Guzmán Barrón”, articulando servicio, educación técnica y desarrollo sostenible.
+          </p>
+
+          <p class="highlight">
+            Más que un documento formal, este convenio es una decisión estratégica: colocar a la juventud huaracina en el centro de la transición energética.
+          </p>
+
+          <ul>
+            <li><strong>Estudiantes:</strong> fortalecen su formación con experiencias prácticas.</li>
+            <li><strong>Técnicos y profesionales:</strong> acceden a capacitación y actualización.</li>
+            <li><strong>Comunidad:</strong> gana talento preparado para soluciones energéticas reales y seguras.</li>
+          </ul>
+
+          <div class="gallery" style="margin-top:14px;">
+            <figure><img src="FC 1.jpeg" alt="Firma del convenio - 1"><figcaption>Firma oficial del Convenio de Cooperación.</figcaption></figure>
+            <figure><img src="FC 2.jpeg" alt="Firma del convenio - 2"><figcaption>Suscripción del acuerdo por autoridades.</figcaption></figure>
+            <figure><img src="FC 3.jpeg" alt="Firma del convenio - 3"><figcaption>Presentación y validación institucional.</figcaption></figure>
+            <figure><img src="FC 4.jpeg" alt="Firma del convenio - 4"><figcaption>Foto protocolar con comunidad educativa.</figcaption></figure>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- GALERÍAS (GENERAL) -->
+      <section id="galerias">
+        <div class="card">
+          <h2>Galerías</h2>
+          <h3>Evidencias visuales de nuestras actividades</h3>
+
+          <p class="lead">
+            Estas galerías consolidan la memoria institucional: servicio documentado, liderazgo visible y resultados medibles.
+          </p>
+
+          <!-- Puedes mantener tu galería antigua aquí si deseas -->
+          <div class="gallery" style="margin-top:14px;">
+            <figure><img src="Foto 1.jpg" alt="Galería 1"><figcaption>Actividad del club.</figcaption></figure>
+            <figure><img src="Foto 2.jpg" alt="Galería 2"><figcaption>Acción comunitaria.</figcaption></figure>
+            <figure><img src="Foto 3.jpg" alt="Galería 3"><figcaption>Trabajo articulado.</figcaption></figure>
+            <figure><img src="Foto 4.jpg" alt="Galería 4"><figcaption>Proyecto en ejecución.</figcaption></figure>
+            <figure><img src="Foto 5.jpg" alt="Galería 5"><figcaption>Compromiso y servicio.</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ÚNETE -->
+      <section id="unete">
+        <div class="card">
+          <h2>Únete al Club</h2>
+          <h3>Tu vocación de servicio puede convertirse en impacto real</h3>
+          <p class="lead">¿Te inspira cambiar el mundo desde tu comunidad? Conversemos.</p>
+          <div class="cta" style="margin-top:12px;">
+            <a class="btn primary" href="https://wa.me/51942899919?text=Hola%2C%20quiero%20unirme%20al%20Club%20Rotary%20Huaraz%20Colonial" target="_blank" rel="noopener">
+              Quiero ser parte del Club
+            </a>
+            <a class="btn ghost" href="#contacto">Enviar una consulta</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- EMPRESAS ALIADAS -->
+      <section>
+        <div class="card">
+          <h2>Empresas e instituciones aliadas</h2>
+          <h3>Construyamos juntos impacto real</h3>
+          <p class="lead">
+            Invitamos a instituciones y empresas comprometidas con el bienestar social a sumarse a nuestros propósitos.
+            Generamos proyectos con enfoque técnico, trazabilidad y sostenibilidad.
           </p>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- PROYECTOS -->
-  <section id="proyectos" class="section">
-    <div class="container">
-      <div class="kicker"><span class="dot"></span>Proyectos</div>
-      <h2>Proyectos transformadores</h2>
-      <p class="lead">
-        Convertimos la intención en ejecución: energía limpia, educación técnica y seguridad comunitaria con evidencia y continuidad.
-      </p>
-
-      <div class="grid-3">
+      <!-- CONTACTO -->
+      <section id="contacto">
         <div class="card">
-          <div class="kicker"><span class="dot"></span>Educación</div>
-          <h3>Laboratorio solar y formación práctica</h3>
-          <p>
-            Donación e implementación de un sistema fotovoltaico on-grid y ciclo de capacitación para fortalecer capacidades técnicas sostenibles.
-          </p>
-        </div>
+          <h2>Contacto</h2>
+          <h3>Buzón de consultas</h3>
 
-        <div class="card">
-          <div class="kicker"><span class="dot"></span>Seguridad</div>
-          <h3>Luminarias solares para Llupa</h3>
-          <p>
-            Donación e inauguración de luminarias solares para la iluminación del frontis municipal y mejora de seguridad ciudadana.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="kicker"><span class="dot"></span>Bienestar</div>
-          <h3>Termas solares en zonas altoandinas</h3>
-          <p>
-            Proyectos para mejorar calidad de vida y salud familiar, promoviendo acceso a agua caliente con tecnología sostenible.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALERÍAS -->
-  <section id="galerias" class="section">
-    <div class="container">
-      <div class="kicker"><span class="dot"></span>Evidencias</div>
-      <h2>Galerías fotográficas</h2>
-      <p class="lead">
-        Registro visual de hitos institucionales, proyectos y actividades de formación.
-      </p>
-
-      <!-- Galería: Capacitación (usa CC 1..7 según los nombres que cargaste) -->
-      <div class="card" style="margin-bottom:18px;">
-        <h3 style="margin:0 0 6px 0;">Capacitación en Sistemas Fotovoltaicos</h3>
-        <p style="margin:0; color:var(--muted);">Comunidad estudiantil del IESTP “Eleazar Guzmán Barrón” · enfoque práctico</p>
-
-        <div class="gallery">
-          <figure>
-            <img src="CC 1.jpeg" alt="Capacitación FV - sesión y presentación" />
-            <figcaption>Sesión formativa y exposición técnica.</figcaption>
-          </figure>
-          <figure>
-            <img src="CC 2.jpeg" alt="Capacitación FV - participación institucional" />
-            <figcaption>Participación institucional y coordinación.</figcaption>
-          </figure>
-          <figure>
-            <img src="CC 3.jpeg" alt="Capacitación FV - demostración técnica" />
-            <figcaption>Demostración técnica y criterios de operación.</figcaption>
-          </figure>
-          <figure>
-            <img src="CC 4.jpeg" alt="Capacitación FV - práctica en campo" />
-            <figcaption>Práctica en campo: tecnología tangible.</figcaption>
-          </figure>
-          <figure>
-            <img src="CC 5.jpeg" alt="Capacitación FV - explicación frente a paneles" />
-            <figcaption>Explicación frente a paneles y estructura.</figcaption>
-          </figure>
-          <figure>
-            <img src="CC 6.jpeg" alt="Capacitación FV - grupo y aprendizaje" />
-            <figcaption>Participación activa y aprendizaje significativo.</figcaption>
-          </figure>
-          <figure>
-            <img src="CC 7.jpeg" alt="Capacitación FV - cierre de actividad" />
-            <figcaption>Cierre de jornada formativa.</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <!-- Galería: Convenio (FC 1..4) -->
-      <div class="card" style="margin-bottom:18px;">
-        <h3 style="margin:0 0 6px 0;">Convenio de Cooperación (Agosto 2025)</h3>
-        <p style="margin:0; color:var(--muted);">Alianza Rotary Huaraz Colonial + IESTP “Eleazar Guzmán Barrón”</p>
-
-        <div class="gallery">
-          <figure>
-            <img src="FC 1.jpeg" alt="Firma del convenio" />
-            <figcaption>Firma oficial del Convenio de Cooperación.</figcaption>
-          </figure>
-          <figure>
-            <img src="FC 2.jpeg" alt="Suscripción del acuerdo" />
-            <figcaption>Suscripción del acuerdo por autoridades.</figcaption>
-          </figure>
-          <figure>
-            <img src="FC 3.jpeg" alt="Presentación del convenio" />
-            <figcaption>Presentación y validación institucional.</figcaption>
-          </figure>
-          <figure>
-            <img src="FC 4.jpeg" alt="Foto protocolar del convenio" />
-            <figcaption>Foto protocolar con comunidad educativa.</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <!-- Galería: Visita Gobernadora (VG 1..10) -->
-      <div class="card">
-        <h3 style="margin:0 0 6px 0;">Visita de la Gobernadora Distrital 4465</h3>
-        <p style="margin:0; color:var(--muted);">Territorio · unidad · reconocimiento · servicio</p>
-
-        <div class="gallery">
-          <figure>
-            <img src="VG 1.jpeg" alt="Visita Gobernadora - territorio" />
-            <figcaption>Jornada de territorio e identidad.</figcaption>
-          </figure>
-          <figure>
-            <img src="VG 2.jpeg" alt="Visita Gobernadora - encuentro" />
-            <figcaption>Encuentro rotario y cohesión institucional.</figcaption>
-          </figure>
-          <figure>
-            <img src="VG 3.jpeg" alt="Visita Gobernadora - actividad" />
-            <figcaption>Coordinación y acompañamiento.</figcaption>
-          </figure>
-          <figure>
-            <img src="VG 4.jpeg" alt="Visita Gobernadora - acto institucional" />
-            <figcaption>Acto institucional y presencia rotaria.</figcaption>
-          </figure>
-          <figure>
-            <img src="VG 5.jpeg" alt="Visita Gobernadora - reconocimiento" />
-            <figcaption>Reconocimiento especial y gratitud.</figcaption>
-          </figure>
-          <figure>
-            <img src="VG 6.jpeg" alt="Visita Gobernadora - camaradería" />
-            <figcaption>Cena de camaradería y pertenencia.</figcaption>
-          </figure>
-          <figure>
-            <img src="VG 7.jpeg" alt="Visita Gobernadora - equipo" />
-            <figcaption>Equipo rotario: unidad y liderazgo.</figcaption>
-          </figure>
-          <figure>
-            <img src="VG 8.jpeg" alt="Visita Gobernadora - reunión" />
-            <figcaption>Diálogo y orientación institucional.</figcaption>
-          </figure>
-          <figure>
-            <img src="VG 9.jpeg" alt="Visita Gobernadora - actividad comunitaria" />
-            <figcaption>Servicio y acompañamiento en comunidad.</figcaption>
-          </figure>
-          <figure>
-            <img src="VG 10.jpeg" alt="Visita Gobernadora - cierre" />
-            <figcaption>Cierre de jornada y consolidación de compromisos.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ÚNETE -->
-  <section id="unete" class="section">
-    <div class="container">
-      <div class="kicker"><span class="dot"></span>Únete</div>
-      <h2>Súmate al Club</h2>
-      <p class="lead">
-        ¿Tienes vocación de servicio? ¿Te inspira cambiar tu comunidad con acciones concretas?
-        Conversemos y construyamos proyectos con impacto real.
-      </p>
-
-      <a class="btn primary" href="https://wa.me/51942899919?text=Hola%2C%20quiero%20unirme%20al%20Club%20Rotary%20Huaraz%20Colonial" target="_blank" rel="noopener">
-        Quiero ser parte del Club
-      </a>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section id="contacto" class="section">
-    <div class="container">
-      <div class="kicker"><span class="dot"></span>Contacto</div>
-      <h2>Buzón de consultas</h2>
-      <p class="lead">
-        Escríbenos para alianzas, voluntariado, proyectos o actividades institucionales.
-      </p>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3 style="margin-top:0;">Envíanos un mensaje</h3>
-          <!-- Nota: este formulario es HTML. Para que envíe correos, se debe conectar a un backend o servicio (Formspree, etc.). -->
           <form>
-            <div class="form-row">
-              <input type="text" placeholder="Tu nombre" required />
-              <input type="email" placeholder="Tu correo" required />
-            </div>
+            <input type="text" placeholder="Tu nombre" required />
+            <input type="email" placeholder="Tu correo" required />
             <textarea placeholder="Tu mensaje..." required></textarea>
-            <button class="submit" type="submit">Enviar consulta</button>
+            <button class="btn primary" type="submit">Enviar consulta</button>
           </form>
-          <p style="margin-top:12px; color:var(--muted); font-size:13px;">
-            Alternativa directa: WhatsApp (botón flotante) o redes sociales del club.
+
+          <p class="small">
+            Nota: para que el formulario envíe mensajes a un correo real, se requiere configuración adicional (por ejemplo, Formspree o un backend).
           </p>
         </div>
+      </section>
 
-        <div class="card">
-          <h3 style="margin-top:0;">Datos institucionales</h3>
-          <p><strong>Ubicación:</strong> Huaraz, Áncash, Perú</p>
-          <p><strong>Correo:</strong> club.rotary.huaraz.colonial@gmail.com</p>
-          <p><strong>WhatsApp:</strong> +51 942 899 919</p>
-
-          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn ghost" style="background: rgba(23,69,143,.10); border-color: rgba(23,69,143,.14); color: var(--rotary-blue);" href="https://www.facebook.com/profile.php?id=61578558107674" target="_blank" rel="noopener">
-              Facebook
-            </a>
-            <a class="btn ghost" style="background: rgba(23,69,143,.10); border-color: rgba(23,69,143,.14); color: var(--rotary-blue);" href="https://www.tiktok.com/@club.rotary.huara" target="_blank" rel="noopener">
-              TikTok
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+  </main>
 
-  <footer>
-    © 2025–2026 Club Rotary Huaraz Colonial — Todos los derechos reservados.<br/>
-    Huaraz, Áncash, Perú · club.rotary.huaraz.colonial@gmail.com
-  </footer>
-
-  <!-- WhatsApp floating button -->
+  <!-- WHATSAPP FLOAT -->
   <a class="whatsapp-float" href="https://wa.me/51942899919" target="_blank" rel="noopener" aria-label="WhatsApp">
     <img src="whatsapp.png" alt="WhatsApp" />
   </a>
 
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p>© 2025–2026 Club Rotary Huaraz Colonial. Todos los derechos reservados.</p>
+        <p>Huaraz, Áncash, Perú · Correo: club.rotary.huaraz.colonial@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
+
+
 
 
 
