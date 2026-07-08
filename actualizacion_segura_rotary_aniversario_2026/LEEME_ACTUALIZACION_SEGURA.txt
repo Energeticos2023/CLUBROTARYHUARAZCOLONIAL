@@ -1,0 +1,22 @@
+ACTUALIZACIÓN SEGURA - CLUB ROTARY HUARAZ COLONIAL
+
+Esta versión NO reemplaza tu web actual.
+
+Qué contiene:
+- Una carpeta nueva: cambio-mazo-primer-aniversario-2026/
+- Dentro está una página independiente con narrativa, junta directiva, nuevos socios y galería de fotos.
+- No incluye index.html en la raíz, por lo tanto NO pisa ni borra la página actual.
+
+Cómo subirlo sin riesgo en GitHub:
+1. Entra al repositorio CLUBROTARYHUARAZCOLONIAL.
+2. Haz clic en Add file > Upload files.
+3. Arrastra solamente la carpeta: cambio-mazo-primer-aniversario-2026
+4. Verifica que GitHub muestre archivos dentro de esa carpeta nueva.
+5. En Commit changes escribe: Agregar Cambio de Mazo y Primer Aniversario 2026
+6. Confirma.
+
+Después de subirlo, la nueva página debe abrir en:
+https://energeticos2023.github.io/CLUBROTARYHUARAZCOLONIAL/cambio-mazo-primer-aniversario-2026/
+
+Opcional:
+Si luego quieres que aparezca un botón dentro de la página principal, usa el archivo ENLACE_OPCIONAL_PARA_INDEX.html como referencia. Eso sí toca el index.html principal, por eso no lo he incluido como reemplazo automático.
