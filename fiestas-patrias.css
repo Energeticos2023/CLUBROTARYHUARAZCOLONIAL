@@ -1,0 +1,283 @@
+
+
+
+/* =========================================================
+   MODO FIESTAS PATRIAS - Club Rotary Huaraz Colonial
+   Perú 205 años
+   ========================================================= */
+:root{
+  --peru-red:#C8102E;
+  --peru-red-dark:#8B0000;
+  --peru-white:#FFFFFF;
+  --rotary-blue:#17458F;
+  --rotary-blue-dark:#082D69;
+  --rotary-gold:#F7A81B;
+}
+
+body{
+  background:
+    radial-gradient(circle at 8% 0%, rgba(255,255,255,.95), transparent 28%),
+    radial-gradient(circle at 88% 4%, rgba(247,168,27,.24), transparent 22%),
+    linear-gradient(135deg,#fff7f7 0%,#eef5ff 45%,#fff5e6 100%) !important;
+}
+
+header,
+.navbar,
+.site-header,
+.hero,
+.hero-section,
+.banner,
+.main-header{
+  background:
+    radial-gradient(circle at 15% 12%, rgba(255,255,255,.18), transparent 22%),
+    linear-gradient(135deg, var(--peru-red-dark) 0%, var(--peru-red) 18%, var(--rotary-blue) 55%, var(--rotary-blue-dark) 100%) !important;
+  position:relative;
+  overflow:hidden;
+}
+
+header::after,
+.navbar::after,
+.site-header::after,
+.hero::after,
+.hero-section::after,
+.banner::after,
+.main-header::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(255,255,255,.38) 0 2px, transparent 3px),
+    radial-gradient(circle at 28% 34%, rgba(247,168,27,.46) 0 2px, transparent 3px),
+    radial-gradient(circle at 82% 22%, rgba(255,255,255,.32) 0 2px, transparent 3px),
+    radial-gradient(circle at 76% 62%, rgba(247,168,27,.38) 0 2px, transparent 3px);
+  animation:patriaSparkleWeb 4s infinite alternate;
+  pointer-events:none;
+}
+
+@keyframes patriaSparkleWeb{
+  from{opacity:.32; transform:scale(1);}
+  to{opacity:.86; transform:scale(1.012);}
+}
+
+.fiestas-patrias-205{
+  width:min(1120px, calc(100% - 32px));
+  margin:22px auto 26px;
+  padding:24px;
+  border-radius:28px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.96), rgba(255,246,246,.94) 46%, rgba(255,248,226,.96)),
+    linear-gradient(90deg, var(--peru-red), var(--peru-white), var(--peru-red));
+  border:2px solid rgba(200,16,46,.38);
+  box-shadow:
+    0 24px 52px rgba(200,16,46,.16),
+    0 16px 42px rgba(8,45,105,.14),
+    inset 0 0 0 1px rgba(255,255,255,.85);
+  display:grid;
+  grid-template-columns:82px 1fr;
+  gap:20px;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.fiestas-patrias-205::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-36%;
+  width:34%;
+  height:100%;
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,.86), transparent);
+  transform:skewX(-18deg);
+  animation:patriaSweepWeb 4.2s infinite;
+}
+
+@keyframes patriaSweepWeb{
+  0%{left:-38%;}
+  42%{left:118%;}
+  100%{left:118%;}
+}
+
+.patria-glow{
+  position:absolute;
+  right:-80px;
+  top:-80px;
+  width:190px;
+  height:190px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(247,168,27,.38), transparent 68%);
+  pointer-events:none;
+}
+
+.patria-flag{
+  width:82px;
+  height:60px;
+  border-radius:16px;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.92);
+  box-shadow:0 14px 28px rgba(139,0,0,.22);
+  position:relative;
+  z-index:2;
+}
+
+.patria-flag span:nth-child(1),
+.patria-flag span:nth-child(3){background:var(--peru-red);}
+.patria-flag span:nth-child(2){background:var(--peru-white);}
+
+.patria-content{
+  position:relative;
+  z-index:2;
+}
+
+.patria-kicker{
+  margin:0 0 6px !important;
+  color:var(--peru-red-dark) !important;
+  font-weight:900 !important;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-size:.82rem;
+}
+
+.fiestas-patrias-205 h2{
+  margin:0 0 8px !important;
+  color:var(--rotary-blue-dark) !important;
+  font-size:clamp(1.7rem, 3vw, 2.6rem) !important;
+  line-height:1.05 !important;
+  font-weight:950 !important;
+}
+
+.fiestas-patrias-205 p{
+  margin:0 !important;
+  color:#203a5d !important;
+  font-size:clamp(1rem, 1.4vw, 1.12rem) !important;
+  line-height:1.55 !important;
+  font-weight:650 !important;
+}
+
+.fiestas-patrias-205 strong{
+  color:var(--rotary-blue-dark) !important;
+  font-weight:900 !important;
+}
+
+button,
+.btn,
+.button,
+a.btn{
+  transition:transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+button:hover,
+.btn:hover,
+.button:hover,
+a.btn:hover{
+  transform:translateY(-1px);
+  filter:brightness(1.04);
+}
+
+@media(max-width:640px){
+  .fiestas-patrias-205{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:22px 18px;
+  }
+  .patria-flag{
+    margin:0 auto;
+  }
+}
+
+
+
+/* Botón institucional YACUSOL */
+.yacusol-acceso{
+  width:min(1120px, calc(100% - 32px));
+  margin:0 auto 28px;
+  padding:16px 18px;
+  border-radius:24px;
+  background:linear-gradient(135deg,#fff8df 0%,#ffffff 45%,#eaf6ff 100%);
+  border:2px solid rgba(247,168,27,.72);
+  box-shadow:0 16px 34px rgba(247,168,27,.18), 0 12px 28px rgba(8,45,105,.10);
+  display:grid;
+  grid-template-columns:56px 1fr auto;
+  gap:14px;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.yacusol-acceso::before{
+  content:"";
+  position:absolute;
+  left:-30%;
+  top:0;
+  width:28%;
+  height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.85),transparent);
+  transform:skewX(-18deg);
+  animation:yacusolSweep 4.4s infinite;
+}
+
+@keyframes yacusolSweep{
+  0%{left:-35%;}
+  42%{left:115%;}
+  100%{left:115%;}
+}
+
+.yacusol-icon{
+  width:56px;
+  height:56px;
+  border-radius:20px;
+  display:grid;
+  place-items:center;
+  font-size:30px;
+  background:linear-gradient(180deg,#FFD36C,#F7A81B);
+  box-shadow:0 12px 22px rgba(247,168,27,.30);
+  position:relative;
+  z-index:1;
+}
+
+.yacusol-text,
+.yacusol-acceso a{
+  position:relative;
+  z-index:1;
+}
+
+.yacusol-text strong{
+  display:block;
+  color:#082D69;
+  font-weight:950;
+  font-size:1.2rem;
+  letter-spacing:.04em;
+}
+
+.yacusol-text span{
+  display:block;
+  color:#5e4a20;
+  font-weight:750;
+  line-height:1.35;
+  margin-top:2px;
+}
+
+.yacusol-acceso a{
+  text-decoration:none;
+  color:#10203b;
+  background:linear-gradient(135deg,#F7A81B,#FFD36C);
+  border-radius:16px;
+  padding:12px 18px;
+  font-weight:950;
+  box-shadow:0 10px 18px rgba(247,168,27,.24);
+}
+
+@media(max-width:640px){
+  .yacusol-acceso{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+  .yacusol-icon{
+    margin:0 auto;
+  }
+  .yacusol-acceso a{
+    display:block;
+  }
+}

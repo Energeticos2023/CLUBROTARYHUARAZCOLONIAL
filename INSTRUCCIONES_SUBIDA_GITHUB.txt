@@ -1,0 +1,20 @@
+SUBIR SOLO ESTOS ARCHIVOS A GITHUB
+
+Este paquete contiene menos de 100 archivos para evitar el error:
+“Yowza, that’s a lot of files. Try uploading fewer than 100 at a time.”
+
+Pasos:
+1. Descomprime este ZIP.
+2. Entra a la carpeta descomprimida.
+3. Selecciona SOLO estos archivos:
+   - index.html
+   - fiestas-patrias.css
+   - README_FIESTAS_PATRIAS.md
+   - INSTRUCCIONES_SUBIDA_GITHUB.txt (opcional)
+4. Súbelos al repositorio CLUBROTARYHUARAZCOLONIAL.
+5. Presiona Commit changes.
+
+Después abre:
+https://energeticos2023.github.io/CLUBROTARYHUARAZCOLONIAL/?v=patria205yacusol
+
+No necesitas volver a subir todas las fotos. Tus imágenes ya están en el repositorio.
